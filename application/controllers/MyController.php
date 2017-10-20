@@ -42,7 +42,7 @@ class MyController extends CI_Controller {
 				$this->model->wrong_password($username, $i[0]['authentication']+1);
 				$data['err_message'] = "GAGAL LOGIN!".($i[0]['authentication']+1); //untuk load controllet ke view biasanya data butuh dibuat array, didalam array data tersembut ada error message.
 				$this->load->view('sebelum/index');
-                                redirect(base_url('MyController/home'));
+                                redirect('MyController/home');
 		
 		}
 
@@ -143,6 +143,7 @@ class MyController extends CI_Controller {
 	function logout(){
 		$this->session->unset_userdata('username');
 		$this->session>session_destroy();
-		$this->index();
+		//$this->index();
+                redirect('MyController/home');
 	}
 }

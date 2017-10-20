@@ -10,7 +10,7 @@ class MyController_test extends TestCase
     public function setUp(){
         $this->resetInstance();
         $this->CI->load->model('model');
-        $this->objl = $this->CI->modelcontrol;
+        $this->objl = $this->CI->model;
     }
 
     public function test_index(){
@@ -39,7 +39,7 @@ class MyController_test extends TestCase
                 'username' => '',
                 'pass' => '',
             ]);
-        $this->assertRedirect(base_url('MyController/home'));
+        $this->assertRedirect('MyController/home');
         $this->assertFalse( isset($_SESSION['username']) );
     }
 
@@ -49,7 +49,7 @@ class MyController_test extends TestCase
                 'username' => 'haloki',
                 'pass' => 'unmatch',
             ]);
-        $this->assertRedirect(base_url('MyController/home'));
+        $this->assertRedirect('MyController/home');
         $this->assertFalse( isset($_SESSION['username']) );
     }
 
@@ -57,13 +57,13 @@ class MyController_test extends TestCase
         $_SESSION['username'] = "haloki";
         $this->assertTrue( isset($_SESSION['username']) );
         $this->request('GET', 'MyController/logout');
-        $this->assertRedirect(base_url('MyController/home'));
+        $this->assertRedirect('MyController/home');
         $this->assertFalse( isset($_SESSION['username']) );
     }
     
-    /*public function test_createuser(){
-        $totalrow=$this->objl->getTotalRow('halodea','dea oct','ochadea12@gmail.com', '085674561210', 'halodea1', 'keputih gang 1', '0');
-        $output = $this->request('POST','MyController/aksi',
+    public function test_createuser(){
+        $totalrow=$this->objl->getTotalRow('halodea','dea oct','ochadea12@gmail.com', '085674561210', 'halodea1', 'keputih gang 1');
+        $this->request('POST','MyController/aksi',
                 ['name'=>'dea oct',
                 'phone'=>'085674561210',
                 'address'=>'keputih gang 1',
@@ -71,9 +71,10 @@ class MyController_test extends TestCase
                 'username'=>'halodea',
                 'password'=>'halodea1',
                 'confirmpw'=>'halodea1']);
-        $totalrowafter= $this->objl->getTotalRow('halodea','dea oct','ochadea12@gmail.com', '085674561210', 'halodea1', 'keputih gang 1', '0');
+        $totalrowafter= $this->objl->getTotalRow('halodea','dea oct','ochadea12@gmail.com', '085674561210', 'halodea1', 'keputih gang 1');
         $this->assertEquals($totalrowafter,$totalrow+1);
-    }*/
+        $this->objl->deleteRow('halodea','dea oct','ochadea12@gmail.com', '085674561210', 'halodea1', 'keputih gang 1');
+    }
     
     
     public function test_method_404()
