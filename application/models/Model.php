@@ -30,19 +30,25 @@ class Model extends CI_Model{
 		$this->db->insert('user',$data);
 	}
         
-        public function getTotalRow($uname, $name, $email, $phone, $pass, $alamat){
+        public function getTotalRow($uname, $name, $email, $phone, $pass, $alamat, $val){
             $this->db->where('username',$uname);
             $this->db->where('name',$name);
             $this->db->where('email',$email);
             $this->db->where('phone',$phone);
             $this->db->where('password',$pass);
             $this->db->where('address',$alamat);
+            $this->db->where('value',$val);
             $this->db->from('user');
             $query= $this->db->get();
             return $query->num_rows();
         }
- 
-	public function getProduct()
+        
+        public function deleteRow($uname, $name, $email, $phone, $pass, $alamat, $val){
+            
+        }
+
+
+        public function getProduct()
 	{
 		$this->db->select('*');
 		$this->db->from('product');

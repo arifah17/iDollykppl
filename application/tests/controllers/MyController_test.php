@@ -61,6 +61,20 @@ class MyController_test extends TestCase
         $this->assertFalse( isset($_SESSION['username']) );
     }
     
+    /*public function test_createuser(){
+        $totalrow=$this->objl->getTotalRow('halodea','dea oct','ochadea12@gmail.com', '085674561210', 'halodea1', 'keputih gang 1', '0');
+        $output = $this->request('POST','MyController/aksi',
+                ['name'=>'dea oct',
+                'phone'=>'085674561210',
+                'address'=>'keputih gang 1',
+                'email'=>'ochadea12@gmail.com',
+                'username'=>'halodea',
+                'password'=>'halodea1',
+                'confirmpw'=>'halodea1']);
+        $totalrowafter= $this->objl->getTotalRow('halodea','dea oct','ochadea12@gmail.com', '085674561210', 'halodea1', 'keputih gang 1', '0');
+        $this->assertEquals($totalrowafter,$totalrow+1);
+    }*/
+    
     
     public function test_method_404()
 	{

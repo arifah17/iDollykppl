@@ -24,6 +24,12 @@ class Home extends CI_Controller {
 		$this->load->view('sebelum/visit');
 		$this->load->view('sebelum/footer');
 	}
+        
+       public function visitdollog(){
+		$this->load->view('sesudah/header');
+		$this->load->view('sebelum/visit');
+		$this->load->view('sesudah/footer');
+	}
 
 	public function aboutus(){
 		$this->load->view('sebelum/header');
