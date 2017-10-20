@@ -55,7 +55,7 @@ class Admin extends CI_Controller {
 		$isLogin = $this->adminm->login_authen($username,$password);
 		$i=$this->adminm->authen_user($username);
 
-		if($isLogin->num_rows()==1 && $i[0]['authentication']< 3 ){
+		if($isLogin->num_rows()==1 ){
 			foreach($isLogin->result()as $user){
 			$user_sess['username'] = $user->username;
 			$this->session->set_userdata($user_sess);
@@ -64,16 +64,10 @@ class Admin extends CI_Controller {
 			$this->admin($username);
 		}
 		else{
-			if($i[0]['authentication']< 3){
 				//i di return dalam array 2 dimensi
 				$this->adminm->wrong_password($username, $i[0]['authentication']+1);
 				$data['err_message'] = "GAGAL LOGIN!".($i[0]['authentication']+1); //untuk load controllet ke view biasanya data butuh dibuat array, didalam array data tersembut ada error message.
 				$this->load->view('admin/Loginadm', $data);
-			}
-			else{
-				$data['err_message'] = "AKUN TERBLOCKIR"; //untuk load controllet ke view biasanya data butuh dibuat array, didalam array data tersembut ada error message.
-				$this->load->view('admin/Loginadm', $data);
-			}
 		
 		}
 

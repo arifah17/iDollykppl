@@ -42,6 +42,28 @@ class MyController_test extends TestCase
         $this->assertRedirect('MyController/home');
         $this->assertFalse( isset($_SESSION['username']) );
     }
+    
+    public function test_login_kosongpass(){
+        $this->request('POST', ['MyController','login'],
+            [
+                'username' => 'haloki',
+                'pass' => '',
+            ]);
+        $this->assertRedirect('MyController/home');
+        $this->assertFalse( isset($_SESSION['username']) );
+    }
+    
+    public function test_login_kosonguser(){
+        $this->request('POST', ['MyController','login'],
+            [
+                'username' => '',
+                'pass' => 'halohalo',
+            ]);
+        $this->assertRedirect('MyController/home');
+        $this->assertFalse( isset($_SESSION['username']) );
+    }
+    
+    
 
         public function test_login_gagal(){
         $this->request('POST', ['MyController','login'],
