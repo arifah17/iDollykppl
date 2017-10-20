@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+//coba ajas
 class Admin extends CI_Controller {
 
 	public function __construct() {
