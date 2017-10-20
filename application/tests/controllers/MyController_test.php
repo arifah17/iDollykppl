@@ -33,10 +33,20 @@ class MyController_test extends TestCase
         $this->assertEquals('haloki', $_SESSION['username']);
     }
     
-    public function test_login_gagal(){
+    public function test_login_kosong(){
         $this->request('POST', ['MyController','login'],
             [
-                'username' => 'haloi',
+                'username' => '',
+                'pass' => '',
+            ]);
+        $this->assertRedirect(base_url('MyController/home'));
+        $this->assertFalse( isset($_SESSION['username']) );
+    }
+
+        public function test_login_gagal(){
+        $this->request('POST', ['MyController','login'],
+            [
+                'username' => 'haloki',
                 'pass' => 'unmatch',
             ]);
         $this->assertRedirect(base_url('MyController/home'));
@@ -44,9 +54,10 @@ class MyController_test extends TestCase
     }
 
      public function test_logout(){
-        $this->assertFalse( isset($_SESSION['username']) );
+        $_SESSION['username'] = "haloki";
+        $this->assertTrue( isset($_SESSION['username']) );
         $this->request('GET', 'MyController/logout');
-        //$this->assertRedirect('');
+        $this->assertRedirect(base_url('MyController/home'));
         $this->assertFalse( isset($_SESSION['username']) );
     }
     

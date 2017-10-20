@@ -148,6 +148,6 @@ class MyController extends CI_Controller {
 	function logout(){
 		$this->session->unset_userdata('username');
 		$this->session>session_destroy();
-		$this->index();
+		redirect(base_url('MyController/home'));
 	}
 }
