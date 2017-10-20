@@ -7,6 +7,12 @@
  */
 class MyController_test extends TestCase
 {
+    public function setUp(){
+        $this->resetInstance();
+        $this->CI->load->model('model');
+        $this->objl = $this->CI->modelcontrol;
+    }
+
     public function test_index(){
        $output = $this->request('GET', 'MyController/index');
        $this->assertContains('<title>iDolly</title>', $output); 
