@@ -83,18 +83,18 @@ class MyController_test extends TestCase
     }
     
     public function test_createuser(){
-        $totalrow=$this->objl->getTotalRow('halodea','dea oct','ochadea12@gmail.com', '085674561210', 'halodea1', 'keputih gang 1');
+        $totalrow=$this->objl->getTotalRow('halodea3','dea oct','ochadea12@gmail.com', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');
         $this->request('POST','MyController/aksi',
                 ['name'=>'dea oct',
                 'phone'=>'085674561210',
                 'address'=>'keputih gang 1',
                 'email'=>'ochadea12@gmail.com',
-                'username'=>'halodea',
+                'username'=>'halodea3',
                 'password'=>'halodea1',
                 'confirmpw'=>'halodea1']);
-        $totalrowafter= $this->objl->getTotalRow('halodea','dea oct','ochadea12@gmail.com', '085674561210', 'halodea1', 'keputih gang 1');
-        $this->assertEquals($totalrowafter,$totalrow+1);
-        $this->objl->deleteRow('halodea','dea oct','ochadea12@gmail.com', '085674561210', 'halodea1', 'keputih gang 1');
+        $totalrowafter= $this->objl->getTotalRow('halodea','dea oct','ochadea12@gmail.com', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');
+        $this->assertEquals($totalrowafter, $totalrow+1);
+        $this->objl->deleteRow('halodea3','dea oct','ochadea12@gmail.com', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');
     }
     
     

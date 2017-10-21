@@ -29,7 +29,7 @@ class Crud_test extends TestCase
                 'password'=>'halodea1',
                 'confirmpw'=>'halodea1']);
         $totalrowafter= $this->objl->getTotalRow('halodea','dea oct','ochadea12@gmail.com', '085674561210', 'halodea1', 'keputih gang 1');
-        $this->assertEquals($totalrowafter,$totalrow);
+        $this->assertEquals($totalrowafter,$totalrow+1);
         $this->objl->deleteRow('halodea','dea oct','ochadea12@gmail.com', '085674561210', 'halodea1', 'keputih gang 1');
     }
        
