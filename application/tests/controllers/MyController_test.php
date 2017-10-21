@@ -63,8 +63,6 @@ class MyController_test extends TestCase
         $this->assertFalse( isset($_SESSION['username']) );
     }
     
-    
-
         public function test_login_gagal(){
         $this->request('POST', ['MyController','login'],
             [

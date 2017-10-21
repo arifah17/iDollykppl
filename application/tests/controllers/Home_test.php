@@ -66,23 +66,36 @@ class Home_test extends TestCase
 		$this->assertContains('<title>iDolly</title>', $output);
 	}
         
-        public function test_aboutus(){
+        public function test_aboutuslog(){
                  $_SESSION['username'] = "haloki";
+                //$_SESSION['logged_in'] = TRUE;
+		$output = $this->request('GET', 'Home/aboutuslog');
+		$this->assertContains('<title>iDolly</title>', $output);
+        }
+        
+        public function test_mailusulog(){
+                 $_SESSION['username'] = "haloki";
+                //$_SESSION['logged_in'] = TRUE;
+		$output = $this->request('GET', 'Home/mailuslog');
+		$this->assertContains('<title>iDolly</title>', $output);
+        }
+        
+        public function test_aboutus(){
+                //$_SESSION['username'] = "haloki";
                 //$_SESSION['logged_in'] = TRUE;
 		$output = $this->request('GET', 'Home/aboutus');
 		$this->assertContains('<title>iDolly</title>', $output);
         }
-        
-       /* public function test_sendmail()
+
+
+        /* public function test_sendmail()
         {
             $output = $this->request('POST', 'Home/sendMail');
             $this->assertContains('<h3 class="w3_agile_head">Our Menu</h3>', $output);
         }*/
 
 
-        
-        
-
+ 
 	public function test_method_404()
 	{
 		$this->request('GET', 'welcome/method_not_exist');
