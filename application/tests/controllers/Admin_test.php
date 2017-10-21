@@ -28,7 +28,7 @@ class  Admin_test extends TestCase{
                 'username' => 'pbw',
                 'pass' => 'unmatch',
             ]);
-        //$this->assertRedirect('sebelum/index');
+        //$this->assertRedirect('admin/index');
         $this->assertFalse( isset($_SESSION['username']) );
     }
     
@@ -40,13 +40,14 @@ class  Admin_test extends TestCase{
     }
     
     
-    /*public function test_updateStatus(){
+    public function test_updateStatus(){
         $_SESSION['username'] = 'pbw';
         $_SESSION['role'] = 'admin';
         $id = '12539';
-        $output = $this->request('GET', 'admin/updateStatus/12539');
-        $this
-    }*/
+        $this->request('GET', 'Admin/updateStatus/42771');
+        $this->assertRedirect('Admin/tabpesanan'); 
+    }
+    
     public function test_logout(){
         $_SESSION['username'] = "pbw";
         $_SESSION['role']= "admin";

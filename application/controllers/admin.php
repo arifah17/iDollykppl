@@ -26,8 +26,7 @@ class Admin extends CI_Controller {
 
 	function updateStatus($ID){
 		$this->mproduct->updateOrder($ID);
-		$this->tabpesanan();
-	}
+		redirect('Admin/tabpesanan');}
 
 	function usertable(){
 			$data = $this->adminm->getDataUser();
@@ -35,10 +34,7 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/usertable',array('data' => $data));
 	}
 
-	function updateAuthen($username){
-		$this->adminm->update($username);
-		$this->usertable();
-	}
+
 
 	function login(){
 		$username = $this->input->post('username');
@@ -46,7 +42,6 @@ class Admin extends CI_Controller {
 		$password = sha1($enpass);
 		//get data
 		$isLogin = $this->adminm->login_authen($username,$password);
-		$i=$this->adminm->authen_user($username);
 
 		if($isLogin->num_rows()==1 ){
 			foreach($isLogin->result()as $user){
@@ -62,7 +57,6 @@ class Admin extends CI_Controller {
 		}
 		else{
 				//i di return dalam array 2 dimensi
-				$this->adminm->wrong_password($username, $i[0]['authentication']+1);
 				$data['err_message'] = "GAGAL LOGIN!".($i[0]['authentication']+1); //untuk load controllet ke view biasanya data butuh dibuat array, didalam array data tersembut ada error message.
 				$this->load->view('admin/Loginadm', $data);
 		
@@ -72,7 +66,6 @@ class Admin extends CI_Controller {
 	function logout(){
                 $this->session->unset_userdata('username');
 		$this->session>session_destroy();
-		redirect('admin/index()');
-	}
+		redirect('admin/index()');}
 	
 }

@@ -38,13 +38,7 @@ class MyController extends CI_Controller {
 			$this->homee($username);
 		}
 		else{
-			
-				//i di return dalam array 2 dimensi
-				$this->model->wrong_password($username, $i[0]['authentication']+1);
-				$data['err_message'] = "GAGAL LOGIN!".($i[0]['authentication']+1); //untuk load controllet ke view biasanya data butuh dibuat array, didalam array data tersembut ada error message.
-				$this->load->view('sebelum/index');
-                                redirect('MyController/home');
-		
+                                redirect('MyController/home');	
 		}
 
 

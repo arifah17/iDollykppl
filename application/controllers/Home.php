@@ -37,12 +37,6 @@ class Home extends CI_Controller {
 		$this->load->view('sebelum/footer');
 	}
 
-	public function mailus(){
-		$this->load->view('sebelum/header');
-		$this->load->view('sebelum/mail');
-		$this->load->view('sebelum/footer');
-	} 
-
 	public function makanan(){
 		$data['data'] = $this->model->getProduct0();
 		$this->load->view('sesudah/header');
@@ -74,11 +68,6 @@ class Home extends CI_Controller {
 	public function aboutuslog(){
 		$this->load->view('sesudah/header');
 		$this->load->view('sesudah/aboutus');
-		$this->load->view('sesudah/footer');
-	}
-	public function mailuslog(){
-		$this->load->view('sesudah/header');
-		$this->load->view('sesudah/mail');
 		$this->load->view('sesudah/footer');
 	}
 	public function pesan(){

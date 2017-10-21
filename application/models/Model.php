@@ -21,10 +21,6 @@ class Model extends CI_Model{
 		}
 	}
 	
-	function wrong_password($username,$value){	
-		$sql = "update user set authentication = '$value' where username = '$username';" ;
-		$query = $this->db->query($sql);
-	}
 
 	function addAkun($data){
 		$this->db->insert('user',$data);
@@ -43,7 +39,7 @@ class Model extends CI_Model{
         }
         
         public function deleteRow($uname, $name, $email, $phone, $pass, $alamat){
-             $this->db->where('username',$uname);
+            $this->db->where('username',$uname);
             $this->db->where('name',$name);
             $this->db->where('email',$email);
             $this->db->where('phone',$phone);
@@ -109,19 +105,6 @@ class Model extends CI_Model{
 			$this->db->insert('po',$key);
 		}
 	}
-
-	function changeActiveState($key)
-		{
-		 $this->load->database();
-		 $data = array(
-		 'value' => 1
-		 );
-
-		 $this->db->where('md5(username)', $key);
-		 $this->db->update('user', $data);
-
-		 return true;
-		}
 }
 
 
