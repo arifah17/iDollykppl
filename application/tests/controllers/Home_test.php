@@ -19,13 +19,13 @@ class Home_test extends TestCase
         public function test_menu()
 	{
 		$output = $this->request('GET', 'Home/menu');
-		$this->assertContains('<title>iDolly</title>', $output);
+		$this->assertContains('<h3 class="w3_agile_head">Our Product</h3>', $output);
 	}
         
         public function test_visitdol()
 	{
 		$output = $this->request('GET', 'Home/visitdol');
-		$this->assertContains('<title>iDolly</title>', $output);
+		$this->assertContains('<h1 class="page-header">VISIT DOLLY</h1>', $output);
 	}
         
         public function test_mailus()
@@ -39,7 +39,7 @@ class Home_test extends TestCase
                 $_SESSION['username'] = "haloki";
                 //$_SESSION['logged_in'] = TRUE;
 		$output = $this->request('GET', 'Home/makanan');
-		$this->assertContains('<title>iDolly</title>', $output);
+		$this->assertContains('<h3 class="w3_agile_head">Our Product</h3>', $output);
 	}
         
         public function test_makanan_menu()
@@ -47,7 +47,7 @@ class Home_test extends TestCase
                 $_SESSION['username'] = "haloki";
                 //$_SESSION['logged_in'] = TRUE;
 		$output = $this->request('GET', 'Home/menulog');
-		$this->assertContains('<title>iDolly</title>', $output);
+		$this->assertContains('<h3 class="w3_agile_head">Our Product</h3>', $output);
 	}
         
          public function test_viewKain()
@@ -55,7 +55,7 @@ class Home_test extends TestCase
                 $_SESSION['username'] = "haloki";
                 //$_SESSION['logged_in'] = TRUE;
 		$output = $this->request('GET', 'Home/kain');
-		$this->assertContains('<title>iDolly</title>', $output);
+		$this->assertContains('<h3 class="w3_agile_head">Our Product</h3>', $output);
 	}
         
          public function test_viewSepatu()
