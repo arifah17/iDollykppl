@@ -1,5 +1,10 @@
 <?php
 class  Admin_test extends TestCase{
+    public function setUp(){
+        $this->resetInstance();
+        $this->CI->load->model('model');
+        $this->objl = $this->CI->Adminm;        
+    }
     public function test_index()
 	{
 		$output = $this->request('GET', 'admin/index');
@@ -26,11 +31,13 @@ class  Admin_test extends TestCase{
         $this->assertFalse( isset($_SESSION['username']) );
     }
     
-    public function test_tabproduct(){
-        $_SESSION['username'] = "pbw";
-        $output= $this->request('admin/tabproduct');
-        $this->assertContains('<title>iDolly Admin Panel</title>',$output);
+    public function test_tabpesanan(){
+        $_SESSION['username'] = 'pbw';
+        $_SESSION['role'] = 'admin';
+        $output = $this->request('GET', 'admin/tabpesanan');
+	$this->assertContains('<title>Order Panel</title>', $output);
     }
+    
 }
 /* 
  * To change this license header, choose License Headers in Project Properties.

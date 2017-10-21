@@ -29,6 +29,7 @@ class MyController extends CI_Controller {
 			foreach ($isLogin->result()as $user) {
                             $session_data = array(
 						'username'	=> $username,
+                                                'role'          => 'user',
 						'logged_in'	=> TRUE
 						);
 			//$user_sess['username'] = $user->username;
@@ -89,62 +90,10 @@ class MyController extends CI_Controller {
 		
 		$username = $this->model->addAkun($data);
 		//$this->index();
-
-			$encrypted_id = md5($username);
-	  
-		    $this->load->library('email');
-		    $config = array();
-		    $config['charset'] = 'utf-8';
-		    $config['useragent'] = 'Codeigniter';
-		    $config['protocol']= "smtp";
-		    $config['mailtype']= "html";
-		    $config['smtp_host']= "ssl://smtp.gmail.com";//pengaturan smtp
-		    $config['smtp_port']= "465";
-		    $config['smtp_timeout']= "400";
-		    $config['smtp_user']= "idollysurabaya@gmail.com"; // isi dengan email kamu
-		    $config['smtp_pass']= "idollysurabaya123"; // isi dengan password kamu
-		    $config['crlf']="\r\n"; 
-		    $config['newline']="\r\n"; 
-		    $config['wordwrap'] = TRUE;
-		    //memanggil library email dan set konfigurasi untuk pengiriman email
-		   
-		    $this->email->initialize($config);
-		    //konfigurasi pengiriman
-		    $this->email->from($config['smtp_user']);
-		    $this->email->to($email);
-		    $this->email->subject("Verifikasi Akun");
-		    $this->email->message(
-		     "terimakasih telah melakuan registrasi di Web iDolly, untuk memverifikasi silahkan klik tautan dibawah ini<br><br>".
-		      site_url("MyController/verification/$encrypted_id")
-		    );
-		  
-		    if($this->email->send())
-		    {
-		       $this->load->view('sebelum/header');
-		       $this->load->view('sebelum/verif2');
-		       $this->load->view('sebelum/footer');
-		    }else
-		    {
-		       echo "Berhasil melakukan registrasi, namun gagal mengirim verifikasi email";
-		    }
-
 		}
-
-		public function verification($key)
-			{
-			 $this->load->helper('url');
-			 $this->load->model('model');
-			 $this->model->changeActiveState($key);
-			 $this->load->view('sebelum/header');
-			 $this->load->view('sebelum/verif');
-			 $this->load->view('sebelum/footer');
-			}
-
-
 	function logout(){
 		$this->session->unset_userdata('username');
 		$this->session>session_destroy();
 		//$this->index();
-                redirect('MyController/home');
-	}
+                redirect('MyController/home');}
 }

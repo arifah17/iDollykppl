@@ -6,13 +6,22 @@ class Product extends CI_Controller {
 
 		parent::__construct();
 		$this->load->model('mproduct');
+                 if($this->session->userdata('role')!='admin'){
+                    echo "anda tidak memiliki hak akses";
+                }
+                else{
+                 $this->index();
+                }
+                
 	}
-	function tabproduct(){
-			$data = $this->mproduct->getKategori();
+        
+        function index(){
+                        $data = $this->mproduct->getKategori();
 			$dpro = $this->mproduct->getProduct();
 			$this->load->view('admin/navigation');
 			$this->load->view('admin/tabproduct',array('data'=>$data));
-	}
+        }
+	
 	function addProduct() {
 		$id_product = $_POST['id'];
 		$nama_product = $_POST['nama_product'];
