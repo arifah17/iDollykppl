@@ -105,14 +105,6 @@ class Home_test extends TestCase
 		$this->assertContains('<title>iDolly</title>', $output);
         }
 
-
-        /* public function test_sendmail()
-        {
-            $output = $this->request('POST', 'Home/sendMail');
-            $this->assertContains('<h3 class="w3_agile_head">Our Menu</h3>', $output);
-        }*/
-
-
  
 	public function test_method_404()
 	{

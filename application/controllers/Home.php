@@ -88,33 +88,5 @@ class Home extends CI_Controller {
 		$this->load->view('sesudah/Order');
 	}
 
-	function sendMail() 
-	{
-	$config['protocol']    = 'smtp';
-        $config['smtp_host']    = 'ssl://smtp.gmail.com';
-        $config['smtp_port']    = '465';
-        $config['smtp_timeout'] = '7';
-        $config['smtp_user']    = 'idollysurabaya@gmail.com';
-        $config['smtp_pass']    = 'idollysurabaya';
-        $config['charset']    = 'utf-8';
-        $config['newline']    = "\r\n";
-        $config['mailtype'] = 'text'; // or html
-        $config['validation'] = TRUE; // bool whether to validate email or not      
-
-        $this->email->initialize($config);
-        $this->email->set_mailtype("html");
-        $this->email->from('idollysurabaya@gmail.com');
-        $this->email->to('arifahkinasih@gmail.com'); 
-
-        $this->email->subject($this->input->post('Subject'));
-        $this->email->message("<html><body><h2>".$this->input->post('Email')."</h2><br><p>".$this->input->post('Message')."</p></body></html>");  
-
-        $this->email->send();
-
-        echo $this->email->print_debugger();
-
-        $this->load->view('sebelum/index');
-	}
-
 	}
 ?>

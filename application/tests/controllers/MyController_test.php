@@ -24,7 +24,6 @@ class MyController_test extends TestCase
     }
     
     public function test_login(){
-       //$this->assertFalse( isset($_SESSION['username']) );
         $this->request('POST', ['MyController','login'],
             [
                 'username' => 'haloki',
