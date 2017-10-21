@@ -1,5 +1,5 @@
 <?php
-    if(!$this->session->has_userdata('username')){
+    if($this->session->userdata('role')!="admin"){
         redirect('Admin/index');
     }
 ?>
