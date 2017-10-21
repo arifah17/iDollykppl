@@ -27,13 +27,7 @@ class Home_test extends TestCase
 		$output = $this->request('GET', 'Home/visitdol');
 		$this->assertContains('<h1 class="page-header">VISIT DOLLY</h1>', $output);
 	}
-        
-        public function test_mailus()
-	{
-		$output = $this->request('GET', 'Home/mailus');
-		$this->assertContains('<h3 class="w3_agile_head">Mail Us</h3>', $output);
-	}
-        
+
         public function test_makanan()
 	{
                 $_SESSION['username'] = "haloki";
@@ -70,13 +64,6 @@ class Home_test extends TestCase
                 $_SESSION['username'] = "haloki";
                 //$_SESSION['logged_in'] = TRUE;
 		$output = $this->request('GET', 'Home/aboutuslog');
-		$this->assertContains('<title>iDolly</title>', $output);
-        }
-        
-        public function test_mailuslog(){
-                 $_SESSION['username'] = "haloki";
-                //$_SESSION['logged_in'] = TRUE;
-		$output = $this->request('GET', 'Home/mailuslog');
 		$this->assertContains('<title>iDolly</title>', $output);
         }
         
