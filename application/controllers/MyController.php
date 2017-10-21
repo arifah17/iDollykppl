@@ -65,6 +65,7 @@ class MyController extends CI_Controller {
 		$this->form_validation->set_message('name','required min length 5 max length 100');
 		$this->form_validation->set_message('confirmpw','The Confirm password doesnt match password');
 		if($this->form_validation->run() != false){
+                        echo "pendaftaran not valid";
 			$this->createakun();
 		}else{
 			redirect('MyController/home');
