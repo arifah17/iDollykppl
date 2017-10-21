@@ -10,8 +10,6 @@ class Adminm extends CI_Model{
 		$query = $this->db->get('user');
 		return $query->result_array();
 	}
-
-
 	
 }
 

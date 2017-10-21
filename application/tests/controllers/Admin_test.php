@@ -2,7 +2,8 @@
 class  Admin_test extends TestCase{
     public function setUp(){
         $this->resetInstance();
-        $this->CI->load->model('model');
+        $this->CI->load->model('Adminm');
+        $this->CI->load->model('Mproduct');
         $this->objl = $this->CI->Adminm;
         $this->prd = $this->CI->Mproduct;        
     }
