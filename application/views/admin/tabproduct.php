@@ -53,10 +53,10 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Add Product
-                            <a style="float: right;" href="<?php echo base_url()."index.php/product/readProduct"; ?>">Show Product</a>
+                            <a style="float: right;" href="<?php echo base_url()."index.php/Product/readProduct"; ?>">Show Product</a>
                         </div>
                         <div class="panel-body">
-                            <form method="post" action="<?php echo base_url()."index.php/product/addProduct"; ?>" enctype="multipart/form-data">
+                            <form method="post" action="<?php echo base_url()."index.php/Product/addProduct"; ?>" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label>ID.product</label>
                                     <input name="id" class="form-control" placeholder="e.g: C113">

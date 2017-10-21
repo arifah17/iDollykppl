@@ -6,12 +6,6 @@ class Product extends CI_Controller {
 
 		parent::__construct();
 		$this->load->model('mproduct');
-                 if($this->session->userdata('role')!='admin'){
-                    echo "anda tidak memiliki hak akses";
-                }
-                else{
-                 $this->index();
-                }
                 
 	}
         

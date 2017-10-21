@@ -23,6 +23,18 @@ class Product_test extends TestCase{
         $_SESSION['username'] = 'pbw';
         $_SESSION['role'] = 'admin';
         $output = $this->request('GET','product/index');
-        $this->assertContains('<h1 class="page-header">Product</h1>', $output); 
+        $this->assertContains('Add Product', $output); 
     }
+    
+    public function test_readProduct(){
+        $_SESSION['username'] = 'pbw';
+        $_SESSION['role'] = 'admin';
+        $output = $this->request('GET','Product/readProduct');
+        $this->assertContains('<title>Product List</title>', $output); 
+    }
+    
+    public function test_addProduct(){
+        
+    }
+    
 }
