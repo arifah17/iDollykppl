@@ -10,7 +10,6 @@
 							<li class=""><a href="<?php echo base_url().'index.php/Home/menu'?>">Menu</a></li>
 							<li><a href="<?php echo base_url().'index.php/Home/visitdol'?>">Visit Dolly</a></li>
 							<li><a href="<?php echo base_url().'index.php/Home/aboutus'?>">About Us</a></li>
-							<li><a href="<?php echo base_url().'index.php/Home/mailus'?>">Mail Us</a></li>
 					</ul>
 				</div>
 				<div class="agileits_w3layouts_nav_right">
