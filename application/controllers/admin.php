@@ -70,6 +70,7 @@ class Admin extends CI_Controller {
 
 	}
 	function logout(){
+                $this->session->unset_userdata('username');
 		$this->session>session_destroy();
 		redirect('admin/index()');
 	}
