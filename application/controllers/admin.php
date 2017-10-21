@@ -18,13 +18,6 @@ class Admin extends CI_Controller {
 		$this->usertable();
 	}
 
-	function tabproduct(){
-			$data = $this->mproduct->getKategori();
-			$dataPro = $this->mproduct->getProduct();
-			$this->load->view('admin/navigation');
-			$this->load->view('admin/tabproduct',array('data'=>$data));
-	}
-
 	function tabpesanan(){
 			$data = $this->mproduct->getPesanan();
 			$this->load->view('admin/navigation');
@@ -57,8 +50,12 @@ class Admin extends CI_Controller {
 
 		if($isLogin->num_rows()==1 ){
 			foreach($isLogin->result()as $user){
-			$user_sess['username'] = $user->username;
-			$this->session->set_userdata($user_sess);
+			$session_data = array(
+						'username'	=> $username,
+                                                'role'          => 'admin',
+						'logged_in'	=> TRUE
+						);
+			$this->session->set_userdata($session_data);
 			}
 
 			$this->admin($username);

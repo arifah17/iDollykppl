@@ -29,6 +29,7 @@ class MyController extends CI_Controller {
 			foreach ($isLogin->result()as $user) {
                             $session_data = array(
 						'username'	=> $username,
+                                                'role'          => 'user',
 						'logged_in'	=> TRUE
 						);
 			//$user_sess['username'] = $user->username;

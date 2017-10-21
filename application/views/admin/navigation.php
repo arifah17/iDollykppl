@@ -82,7 +82,7 @@
                             <a href="<?php echo base_url().'index.php/Admin/usertable'?>"><i class="fa fa-table fa-fw"></i> User List</a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url().'index.php/Admin/tabproduct'?>"><i class="fa fa-edit fa-fw"></i> Product</a>
+                            <a href="<?php echo base_url().'index.php/Product/tabproduct'?>"><i class="fa fa-edit fa-fw"></i> Product</a>
                         </li>
                          <li>
                             <a href="<?php echo base_url().'index.php/Admin/tabpesanan'?>"><i class="fa fa-shopping-cart"></i> Validasi Pesanan</a>

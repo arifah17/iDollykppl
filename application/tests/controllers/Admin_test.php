@@ -26,11 +26,6 @@ class  Admin_test extends TestCase{
         $this->assertFalse( isset($_SESSION['username']) );
     }
     
-    public function test_tabproduct(){
-        $_SESSION['username'] = "pbw";
-        $output= $this->request('admin/tabproduct');
-        $this->assertContains('<title>iDolly Admin Panel</title>',$output);
-    }
 }
 /* 
  * To change this license header, choose License Headers in Project Properties.
