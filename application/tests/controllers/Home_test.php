@@ -67,13 +67,13 @@ class Home_test extends TestCase
 	}
         
         public function test_aboutuslog(){
-                 $_SESSION['username'] = "haloki";
+                $_SESSION['username'] = "haloki";
                 //$_SESSION['logged_in'] = TRUE;
 		$output = $this->request('GET', 'Home/aboutuslog');
 		$this->assertContains('<title>iDolly</title>', $output);
         }
         
-        public function test_mailusulog(){
+        public function test_mailuslog(){
                  $_SESSION['username'] = "haloki";
                 //$_SESSION['logged_in'] = TRUE;
 		$output = $this->request('GET', 'Home/mailuslog');

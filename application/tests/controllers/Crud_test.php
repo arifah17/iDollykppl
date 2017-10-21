@@ -8,13 +8,13 @@
  * @link       https://github.com/kenjis/ci-phpunit-test
  */
 
-class Crud_artikel_test extends TestCase
+class Crud_test extends TestCase
 {
 	public function setUp()
         {
             $this->resetInstance(); //hard reset. 
             $this->CI->load->model('model');
-            $this->objek = $this->CI->model;
+            $this->objl = $this->CI->model;
             $this->form_validation = new CI_Form_validation();
              
         }
@@ -29,7 +29,7 @@ class Crud_artikel_test extends TestCase
                 'password'=>'halodea1',
                 'confirmpw'=>'halodea1']);
         $totalrowafter= $this->objl->getTotalRow('halodea','dea oct','ochadea12@gmail.com', '085674561210', 'halodea1', 'keputih gang 1');
-        $this->assertEquals($totalrowafter,$totalrow+1);
+        $this->assertEquals($totalrowafter,$totalrow);
         $this->objl->deleteRow('halodea','dea oct','ochadea12@gmail.com', '085674561210', 'halodea1', 'keputih gang 1');
     }
        
