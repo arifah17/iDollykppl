@@ -19,13 +19,13 @@ class Home_test extends TestCase
         public function test_menu()
 	{
 		$output = $this->request('GET', 'Home/menu');
-		$this->assertContains('<title>iDolly</title>', $output);
+		$this->assertContains('<h3 class="w3_agile_head">Our Product</h3>', $output);
 	}
         
         public function test_visitdol()
 	{
 		$output = $this->request('GET', 'Home/visitdol');
-		$this->assertContains('<title>iDolly</title>', $output);
+		$this->assertContains('<h1 class="page-header">VISIT DOLLY</h1>', $output);
 	}
         
         public function test_mailus()
@@ -39,7 +39,7 @@ class Home_test extends TestCase
                 $_SESSION['username'] = "haloki";
                 //$_SESSION['logged_in'] = TRUE;
 		$output = $this->request('GET', 'Home/makanan');
-		$this->assertContains('<title>iDolly</title>', $output);
+		$this->assertContains('<h3 class="w3_agile_head">Our Product</h3>', $output);
 	}
         
         public function test_makanan_menu()
@@ -47,7 +47,7 @@ class Home_test extends TestCase
                 $_SESSION['username'] = "haloki";
                 //$_SESSION['logged_in'] = TRUE;
 		$output = $this->request('GET', 'Home/menulog');
-		$this->assertContains('<title>iDolly</title>', $output);
+		$this->assertContains('<h3 class="w3_agile_head">Our Product</h3>', $output);
 	}
         
          public function test_viewKain()
@@ -55,7 +55,7 @@ class Home_test extends TestCase
                 $_SESSION['username'] = "haloki";
                 //$_SESSION['logged_in'] = TRUE;
 		$output = $this->request('GET', 'Home/kain');
-		$this->assertContains('<title>iDolly</title>', $output);
+		$this->assertContains('<h3 class="w3_agile_head">Our Product</h3>', $output);
 	}
         
          public function test_viewSepatu()
@@ -66,23 +66,46 @@ class Home_test extends TestCase
 		$this->assertContains('<title>iDolly</title>', $output);
 	}
         
-        public function test_aboutus(){
+        public function test_aboutuslog(){
+                $_SESSION['username'] = "haloki";
+                //$_SESSION['logged_in'] = TRUE;
+		$output = $this->request('GET', 'Home/aboutuslog');
+		$this->assertContains('<title>iDolly</title>', $output);
+        }
+        
+        public function test_mailuslog(){
                  $_SESSION['username'] = "haloki";
+                //$_SESSION['logged_in'] = TRUE;
+		$output = $this->request('GET', 'Home/mailuslog');
+		$this->assertContains('<title>iDolly</title>', $output);
+        }
+        
+        public function test_aboutus(){
+                //$_SESSION['username'] = "haloki";
                 //$_SESSION['logged_in'] = TRUE;
 		$output = $this->request('GET', 'Home/aboutus');
 		$this->assertContains('<title>iDolly</title>', $output);
         }
         
-       /* public function test_sendmail()
-        {
-            $output = $this->request('POST', 'Home/sendMail');
-            $this->assertContains('<h3 class="w3_agile_head">Our Menu</h3>', $output);
-        }*/
-
-
+        public function test_visitdolog(){
+                $_SESSION['username']='haloki';
+                $output = $this->request('GET', 'Home/visitdollog');
+		$this->assertContains('<title>iDolly</title>', $output);
+        }
         
+        public function test_pesan(){
+                $_SESSION['username']='haloki';
+                $output = $this->request('GET', 'Home/pesan');
+		$this->assertContains('<title>iDolly</title>', $output);
+        }
         
+        public function test_order(){
+                $_SESSION['username']='haloki';
+                $output = $this->request('GET', 'Home/order');
+		$this->assertContains('<title>iDolly</title>', $output);
+        }
 
+ 
 	public function test_method_404()
 	{
 		$this->request('GET', 'welcome/method_not_exist');

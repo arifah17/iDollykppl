@@ -25,7 +25,7 @@ class MyController extends CI_Controller {
 		//get data
 		$isLogin = $this->model->login_authen($username,$password);
 		$i=$this->model->authen_user($username);
-		if($isLogin->num_rows()==1 && $i[0]['authentication']< 3 ){
+		if($isLogin->num_rows()==1 ){
 			foreach ($isLogin->result()as $user) {
                             $session_data = array(
 						'username'	=> $username,
@@ -37,17 +37,12 @@ class MyController extends CI_Controller {
 			$this->homee($username);
 		}
 		else{
-			if($i[0]['authentication']< 3){
+			
 				//i di return dalam array 2 dimensi
 				$this->model->wrong_password($username, $i[0]['authentication']+1);
 				$data['err_message'] = "GAGAL LOGIN!".($i[0]['authentication']+1); //untuk load controllet ke view biasanya data butuh dibuat array, didalam array data tersembut ada error message.
 				$this->load->view('sebelum/index');
-                                redirect(base_url('MyController/home'));
-			}
-			else{
-				$data['err_message'] = "AKUN TERBLOCKIR"; //untuk load controllet ke view biasanya data butuh dibuat array, didalam array data tersembut ada error message.
-                                redirect(base_url('MyController/home'));
-			}
+                                redirect('MyController/home');
 		
 		}
 
@@ -72,7 +67,7 @@ class MyController extends CI_Controller {
 		if($this->form_validation->run() != false){
 			$this->createakun();
 		}else{
-			$this->load->view('sebelum/index.php');
+			redirect('MyController/home');
 		}
 	}
 
@@ -148,6 +143,7 @@ class MyController extends CI_Controller {
 	function logout(){
 		$this->session->unset_userdata('username');
 		$this->session>session_destroy();
-		redirect(base_url('MyController/home'));
+		//$this->index();
+                redirect('MyController/home');
 	}
 }

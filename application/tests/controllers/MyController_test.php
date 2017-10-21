@@ -10,7 +10,8 @@ class MyController_test extends TestCase
     public function setUp(){
         $this->resetInstance();
         $this->CI->load->model('model');
-        $this->objl = $this->CI->modelcontrol;
+        $this->objl = $this->CI->model;
+        $this->form_validation = new CI_Form_Validation();
     }
 
     public function test_index(){
@@ -23,7 +24,6 @@ class MyController_test extends TestCase
     }
     
     public function test_login(){
-       //$this->assertFalse( isset($_SESSION['username']) );
         $this->request('POST', ['MyController','login'],
             [
                 'username' => 'haloki',
@@ -39,17 +39,37 @@ class MyController_test extends TestCase
                 'username' => '',
                 'pass' => '',
             ]);
-        $this->assertRedirect(base_url('MyController/home'));
+        $this->assertRedirect('MyController/home');
         $this->assertFalse( isset($_SESSION['username']) );
     }
-
+    
+    public function test_login_kosongpass(){
+        $this->request('POST', ['MyController','login'],
+            [
+                'username' => 'haloki',
+                'pass' => '',
+            ]);
+        $this->assertRedirect('MyController/home');
+        $this->assertFalse( isset($_SESSION['username']) );
+    }
+    
+    public function test_login_kosonguser(){
+        $this->request('POST', ['MyController','login'],
+            [
+                'username' => '',
+                'pass' => 'halohalo',
+            ]);
+        $this->assertRedirect('MyController/home');
+        $this->assertFalse( isset($_SESSION['username']) );
+    }
+    
         public function test_login_gagal(){
         $this->request('POST', ['MyController','login'],
             [
                 'username' => 'haloki',
                 'pass' => 'unmatch',
             ]);
-        $this->assertRedirect(base_url('MyController/home'));
+        $this->assertRedirect('MyController/home');
         $this->assertFalse( isset($_SESSION['username']) );
     }
 
@@ -57,8 +77,23 @@ class MyController_test extends TestCase
         $_SESSION['username'] = "haloki";
         $this->assertTrue( isset($_SESSION['username']) );
         $this->request('GET', 'MyController/logout');
-        $this->assertRedirect(base_url('MyController/home'));
+        $this->assertRedirect('MyController/home');
         $this->assertFalse( isset($_SESSION['username']) );
+    }
+    
+    public function test_createuser(){
+        $totalrow=$this->objl->getTotalRow('hulahup','hulala','hulahula@gmail.com', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');
+        $this->request('POST','MyController/aksi',
+                ['name'=>'hulala',
+                'phone'=>'085674561210',
+                'address'=>'keputih gang 1',
+                'email'=>'hulahula@gmail.com',
+                'username'=>'hulahup',
+                'password'=>'halodea1',
+                'confirmpw'=>'halodea1']);
+        $totalrowafter= $this->objl->getTotalRow('hulahup','hulala','hulahula@gmail.com', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');
+        $this->assertEquals($totalrowafter, $totalrow+1);
+        $this->objl->deleteRow('hulahup','hulala','hulahula@gmail.com', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');
     }
     
     
