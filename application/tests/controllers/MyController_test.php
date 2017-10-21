@@ -11,6 +11,7 @@ class MyController_test extends TestCase
         $this->resetInstance();
         $this->CI->load->model('model');
         $this->objl = $this->CI->model;
+        $this->form_validation = new CI_Form_Validation();
     }
 
     public function test_index(){
