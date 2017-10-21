@@ -3,7 +3,8 @@ class  Admin_test extends TestCase{
     public function setUp(){
         $this->resetInstance();
         $this->CI->load->model('model');
-        $this->objl = $this->CI->Adminm;        
+        $this->objl = $this->CI->Adminm;
+        $this->prd = $this->CI->Mproduct;        
     }
     public function test_index()
 	{
@@ -43,8 +44,8 @@ class  Admin_test extends TestCase{
         $_SESSION['username'] = 'pbw';
         $_SESSION['role'] = 'admin';
         $id = '12539';
-        $output = $this->request('GET', 'admin/updateStatus/$id');
-        $this->assertContains('Done',$output);
+        $output = $this->request('GET', 'admin/updateStatus/12539');
+        $this
     }*/
     public function test_logout(){
         $_SESSION['username'] = "pbw";

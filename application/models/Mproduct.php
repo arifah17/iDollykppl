@@ -38,6 +38,10 @@ class mproduct extends CI_Model{
 		$this->db->where('ID',$ID);
 		$this->db->update('order');
 	}
+        
+        /*public function getStatusOrder(){
+            $this->db
+        }*/
 
 }
 ?>
