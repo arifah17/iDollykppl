@@ -38,6 +38,22 @@ class  Admin_test extends TestCase{
 	$this->assertContains('<title>Order Panel</title>', $output);
     }
     
+    
+    /*public function test_updateStatus(){
+        $_SESSION['username'] = 'pbw';
+        $_SESSION['role'] = 'admin';
+        $id = '12539';
+        $output = $this->request('GET', 'admin/updateStatus/$id');
+        $this->assertContains('Done',$output);
+    }*/
+    public function test_logout(){
+        $_SESSION['username'] = "pbw";
+        $_SESSION['role']= "admin";
+        $this->assertTrue( isset($_SESSION['username']) );
+        $this->request('GET', 'admin/logout');
+        $this->assertRedirect('admin/index()');
+        $this->assertFalse( isset($_SESSION['username']) );
+    }
 }
 /* 
  * To change this license header, choose License Headers in Project Properties.

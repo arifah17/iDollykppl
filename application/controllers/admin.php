@@ -71,7 +71,7 @@ class Admin extends CI_Controller {
 	}
 	function logout(){
 		$this->session>session_destroy();
-		$this->index();
+		redirect('admin/index()');
 	}
 	
 }
