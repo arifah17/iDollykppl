@@ -67,7 +67,7 @@ class MyController extends CI_Controller {
 		if($this->form_validation->run() != false){
 			$this->createakun();
 		}else{
-			$this->load->view('sebelum/index.php');
+			redirect('MyController/home');
 		}
 	}
 

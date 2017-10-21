@@ -86,6 +86,24 @@ class Home_test extends TestCase
 		$output = $this->request('GET', 'Home/aboutus');
 		$this->assertContains('<title>iDolly</title>', $output);
         }
+        
+        public function test_visitdolog(){
+                $_SESSION['username']='haloki';
+                $output = $this->request('GET', 'Home/visitdollog');
+		$this->assertContains('<title>iDolly</title>', $output);
+        }
+        
+        public function test_pesan(){
+                $_SESSION['username']='haloki';
+                $output = $this->request('GET', 'Home/pesan');
+		$this->assertContains('<title>iDolly</title>', $output);
+        }
+        
+        public function test_order(){
+                $_SESSION['username']='haloki';
+                $output = $this->request('GET', 'Home/order');
+		$this->assertContains('<title>iDolly</title>', $output);
+        }
 
 
         /* public function test_sendmail()
