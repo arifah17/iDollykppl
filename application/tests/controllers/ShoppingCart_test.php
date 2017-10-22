@@ -23,10 +23,11 @@ class ShoppingCart_test extends TestCase {
     }
     public function test_beli(){
         $_SESSION['username'] = 'haloki';
-        $start = $this->cart->total_items() ;
+        $start = $this->CI->cart->total_items() ;
         $this->request('POST','ShoppingCart/beli/1');
-        $finish = $this->cart->total_items() ;
-        $this->assertEquals($finish, $start+1);
+        $finish = $this->CI->cart->total_items() ;
+        $actual = $finish - $start;
+        $this->assertEquals($actual,1);
         //ngitung isi cart awal
         //tambah cart
         //ngitung cart akhir pakek assert equal
