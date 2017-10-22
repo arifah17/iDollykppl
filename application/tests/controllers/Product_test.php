@@ -32,6 +32,27 @@ class Product_test extends TestCase{
         $output = $this->request('GET','Product/readProduct');
         $this->assertContains('<title>Product List</title>', $output); 
     }
+        public function test_addProduct_gagal(){
+        $_SESSION['username'] = 'pbw';
+        $_SESSION['role'] = 'admin';
+        $filename = '';
+        $filepath = APPPATH.'coba/'.$filename;
+        $files = ['gambar' => [
+            'name' => $filename,
+            'type' => 'image/png',
+            'tmp_name' => $filepath
+        ]];
+        $this->request->setFiles($files);
+        $totalrow = $this->objl->getTotalRow('21','ini nyoba gagal','coba coba gagal','5000','3');
+        $this->request('POST','Product/addProduct',
+        ['id'=>'21',
+         'nama_product'=>'ini nyoba gagal',
+         'deskripsi'=>'coba coba gagal',
+         'harga'=>'5000',
+          'kategori'=>'3']);
+        $totalRowafter = $this->objl->getTotalRow('21','ini nyoba gagal','coba coba gagal','5000','3');
+        $this->request($totalRowafter,$totalrow); 
+    }
     
     public function test_addProduct(){
         $_SESSION['username'] = 'pbw';
@@ -52,9 +73,10 @@ class Product_test extends TestCase{
          'harga'=>'5000',
           'kategori'=>'3']);
         $totalRowafter = $this->objl->getTotalRow('20','ini nyoba juga','coba coba lagi','5000','3');
-        $this->request($totalRowafter,$totalrow+1);
-        
+        $this->request($totalRowafter,$totalrow+1); 
     }
+    
+
     
    public function test_do_delete(){
         $_SESSION['username'] = 'pbw';
