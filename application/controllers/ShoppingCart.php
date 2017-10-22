@@ -21,19 +21,17 @@
 				);
 			$this->cart->insert($data);
 			print_r($data);
-			redirect('/Home/menulog');
-		}
+			redirect('/Home/menulog');}
 
-		function delete($rowid){
+		/*function delete($rowid){
 		$this->cart->update(array('rowid' => $rowid, 'qty' => 0));
 		redirect(base_url('/Home/menulog'));
-		}
+		}*/
 
 		public function clear_cart()
 			{
 				$this->cart->destroy();
-				redirect('Home/menulog');
-			}
+				redirect('Home/menulog');}
 
 		public function addOrder() {
 			$phone = $this->input->post('phone');

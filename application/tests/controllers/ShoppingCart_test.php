@@ -32,4 +32,12 @@ class ShoppingCart_test extends TestCase {
         //tambah cart
         //ngitung cart akhir pakek assert equal
     }
+    public function test_clear_cart(){
+        $_SESSION['username']='haloki';
+        $this->request('POST','ShoppingCart/beli/1');
+        $this->request('POST','ShoppingCart/clear_cart');
+        $finish = $this->CI->cart->total_items();
+        $this->assertEquals($finish,0);
+        $this->assertRedirect('Home/menulog');
+    }
 }
