@@ -5,6 +5,7 @@ class Mpesan extends CI_Model {
     }
 
     public function process($userID,$alamat,$tanggal) {
+        if($alamat!=NULL&&$userID!=NULL){
         $bayar = $this->cart->total();
         $order_id = mt_rand(1,99999);//
         $order = array(
@@ -28,6 +29,10 @@ class Mpesan extends CI_Model {
             $this->db->insert('detailorder', $data);
         }
         return TRUE;
+       }
+       else{
+           return FALSE;
+       }
     }
 
 

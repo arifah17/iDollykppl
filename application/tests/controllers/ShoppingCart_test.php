@@ -40,6 +40,18 @@ class ShoppingCart_test extends TestCase {
         $this->assertEquals($finish,0);
         $this->assertRedirect('Home/menulog');
     }
+    
+    public function test_addOrder_cartkosong(){
+        $_SESSION['username']='elsash';
+        $this->request('GET','ShoppingCart/addOrder',[
+            'tanggal' => '17 juni 2017',
+            'alamat' => 'jalan joyo indah lamongan'
+        ]);
+        $finish = $this->CI->cart->total_items();
+        $this->assertEquals($finish,0);
+        $this->assertRedirect('Home/homee'); 
+    }
+    
     public function test_addOrder(){
         $_SESSION['username']='haloki';
         $this->request('POST','ShoppingCart/beli/1');
@@ -48,7 +60,15 @@ class ShoppingCart_test extends TestCase {
             'tanggal' => '17 juni 2017',
             'alamat' => 'jalan joyo indah lamongan'
         ]);
-        $this->assertRedirect('Home/menulog');
-        
-    } 
+        $this->assertRedirect('Home/menulog');   
+    }
+    public function test_addOrder_fail(){
+        $_SESSION['username']='haloki';
+        $this->request('POST','ShoppingCart/beli/1');
+        $this->request('GET','ShoppingCart/addOrder',[
+            'tanggal' => '17 juni 2017',
+            'alamat' => ''
+        ]);
+        $this->assertRedirect('Home/homee');
+    }
 }

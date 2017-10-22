@@ -43,9 +43,7 @@
 	            redirect('Home/menulog');
 	        } else {
 	            $this->session->set_flashdata('error', 'Maaf, order Anda tidak dapat diproses');
-	        }
-
-    }
+                    redirect('Home/homee');}}
 
 
 		
