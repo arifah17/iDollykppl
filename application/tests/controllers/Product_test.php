@@ -33,8 +33,27 @@ class Product_test extends TestCase{
         $this->assertContains('<title>Product List</title>', $output); 
     }
     
-    public function test_addProduct(){
+    /*public function test_addProduct(){
+        $_SESSION['username'] = 'pbw';
+        $_SESSION['role'] = 'admin';
+        $output = $this->request('POST','Product/addProduct',
+                'id'=>'',
+                'nama_product'=>'',
+                'deskripsi'=>'',
+                'harga'=>'',
+                'kategori'=>'',
+                );
         
-    }
+    }*/
     
+    public function test_do_delete(){
+        $_SESSION['username'] = 'pbw';
+        $_SESSION['role'] = 'admin';
+        $pid = '13';
+        $awal = $this->CI->db->count_all_results('product',array('id'=>$pid));
+        $output = $this->request('POST','product/do_delete/13');
+        $akhir = $this->CI->db->count_all_results('product',array('id'=>$pid));
+        $this->assertEquals($awal-$akhir,1);
+        $this->assertRedirect('product/readProduct');
+    }
 }

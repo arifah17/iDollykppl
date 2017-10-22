@@ -26,6 +26,9 @@ class mproduct extends CI_Model{
 		$this->db->update($table,$data,$pk);
 	}
 
+        public function getProductRow(){
+            
+        }
 	public function getPesanan(){
 		$this->db->select('*');
 		$this->db->join('order','detailorder.orderid=order.ID')->join('user', 'order.user=user.username')->join('product','detailorder.kodeproduct=product.id');
