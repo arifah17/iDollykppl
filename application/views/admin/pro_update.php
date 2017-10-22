@@ -14,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>iDolly Admin panel</title>
+    <title>Update product Panel</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url();?>assets/adm/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

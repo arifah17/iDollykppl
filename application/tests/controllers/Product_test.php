@@ -89,10 +89,11 @@ class Product_test extends TestCase{
         $this->assertRedirect('product/readProduct');
     }
     
-    /*public function test_do_update(){
+    public function test_do_update(){
         $_SESSION['username'] = 'pbw';
         $_SESSION['role'] = 'admin';
-        
-        
-    }*/
+        $id = '14';
+        $output = $this->request('POST','product/do_update/'.$id);
+        $this->assertContains('<title>Update product Panel</title>',$output);
+    }
 }
