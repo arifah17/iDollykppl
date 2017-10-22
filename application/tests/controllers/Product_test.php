@@ -33,27 +33,44 @@ class Product_test extends TestCase{
         $this->assertContains('<title>Product List</title>', $output); 
     }
     
-    /*public function test_addProduct(){
+    public function test_addProduct(){
         $_SESSION['username'] = 'pbw';
         $_SESSION['role'] = 'admin';
-        $output = $this->request('POST','Product/addProduct',
-                'id'=>'',
-                'nama_product'=>'',
-                'deskripsi'=>'',
-                'harga'=>'',
-                'kategori'=>'',
-                );
+        $filename = '3.png';
+        $filepath = APPPATH.'coba/'.$filename;
+        $files = ['gambar' => [
+            'name' => $filename,
+            'type' => 'image/png',
+            'tmp_name' => $filepath
+        ]];
+        $this->request->setFiles($files);
+        $totalrow = $this->objl->getTotalRow('20','ini nyoba juga','coba coba lagi','5000','3');
+        $this->request('POST','Product/addProduct',
+        ['id'=>'20',
+         'nama_product'=>'ini nyoba juga',
+         'deskripsi'=>'coba coba lagi',
+         'harga'=>'5000',
+          'kategori'=>'3']);
+        $totalRowafter = $this->objl->getTotalRow('20','ini nyoba juga','coba coba lagi','5000','3');
+        $this->request($totalRowafter,$totalrow+1);
         
-    }*/
+    }
     
-    public function test_do_delete(){
+   public function test_do_delete(){
         $_SESSION['username'] = 'pbw';
         $_SESSION['role'] = 'admin';
-        $pid = '13';
+        $pid = '20';
         $awal = $this->CI->db->count_all_results('product',array('id'=>$pid));
-        $output = $this->request('POST','product/do_delete/13');
+        $output = $this->request('POST','product/do_delete/20');
         $akhir = $this->CI->db->count_all_results('product',array('id'=>$pid));
         $this->assertEquals($awal-$akhir,1);
         $this->assertRedirect('product/readProduct');
     }
+    
+    /*public function test_do_update(){
+        $_SESSION['username'] = 'pbw';
+        $_SESSION['role'] = 'admin';
+        
+        
+    }*/
 }
