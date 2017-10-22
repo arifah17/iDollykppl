@@ -57,7 +57,7 @@
              </div>
              <div class="form-group">
                     <label>Alamat Pengiriman</label>
-                    <input name="phone" class="form-control">
+                    <input name="alamat" class="form-control">
              </div>
              <button type="submit">Pesan</button>
              </form>

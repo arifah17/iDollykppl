@@ -34,10 +34,10 @@
 				redirect('Home/menulog');}
 
 		public function addOrder() {
-			$phone = $this->input->post('phone');
-			$tanggal = $this->input->post('tanggal');
+		$alamat = $this->input->post('alamat');
+		$tanggal = $this->input->post('tanggal');
 	        $Customer = $this->session->userdata('username');
-	        $isProcessed = $this->Mpesan->process($Customer,$phone,$tanggal);
+	        $isProcessed = $this->Mpesan->process($Customer,$alamat,$tanggal);
 	        if($isProcessed) {
 	            $this->cart->destroy();
 	            redirect('Home/menulog');

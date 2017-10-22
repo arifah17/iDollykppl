@@ -4,13 +4,13 @@ class Mpesan extends CI_Model {
         $this->load->database();
     }
 
-    public function process($userID,$phone,$tanggal) {
+    public function process($userID,$alamat,$tanggal) {
         $bayar = $this->cart->total();
         $order_id = mt_rand(1,99999);//
         $order = array(
-        	'ID' => $order_id,
+            'ID' => $order_id,
             'user' => $userID,
-            'phone'=> $phone,
+            'alamat'=> $alamat,
             'date' => date('Y-m-d H:i:s'),
             'tanggalambil'=>$tanggal,
             'total' => $bayar,
