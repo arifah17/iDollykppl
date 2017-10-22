@@ -91,20 +91,7 @@ class Model extends CI_Model{
 
 	public function getBarang($id_product){
 		$this->db->where('id',$id_product);
-		return $this->db->get('product')->row();
-	}
-
-	public function getAkun()
-	{
-		$this->db->select('user',$data);
-	}
-
-	public function simpanPO($cart,$datapo){
-		$id = uniqid();
-		foreach ($cart as $key) {
-			$this->db->insert('po',$key);
-		}
-	}
+		return $this->db->get('product')->row();}
 }
 
 

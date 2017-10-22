@@ -111,7 +111,6 @@ class MyController_test extends TestCase
         $this->assertRedirect('MyController/home');
     }
     
-    
     public function test_method_404()
 	{
 		$this->request('GET', 'welcome/method_not_exist');

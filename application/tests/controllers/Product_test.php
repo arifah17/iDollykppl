@@ -96,4 +96,28 @@ class Product_test extends TestCase{
         $output = $this->request('POST','product/do_update/'.$id);
         $this->assertContains('<title>Update product Panel</title>',$output);
     }
+    
+    public function test_Updatedata_tanpaFoto(){
+        $_SESSION['username'] = 'pbw';
+        $_SESSION['role'] = 'admin';
+        $id = '14';
+        $filename = '';
+        $filepath = APPPATH.'coba/'.$filename;
+        $files = ['gambar' => [
+            'name' => $filename,
+            'type' => 'image/png',
+            'tmp_name' => $filepath
+        ]];
+        $this->request->setFiles($files);
+        $totalrow = $this->objl->getTotalRow($id,'ini nyoba update','coba coba lagi','5000','3');
+        $this->request('POST','Product/Updatedata/'.$id,
+        ['id'=>$id,
+         'nama_product'=>'ini nyoba update',
+         'deskripsi'=>'coba coba lagi',
+         'harga'=>'5000',
+         'kategori'=>'3',
+         'gambar' => '']);
+        $totalRowafter = $this->objl->getTotalRow($id,'ini nyoba update','coba coba lagi','5000','3');
+        $this->request($totalRowafter,$totalrow);
+    }
 }

@@ -110,8 +110,6 @@ class Product extends CI_Controller {
 				'gambar' => $this->upload->data('file_name'));
 		$pk = array('id'=>$idpro);
 		$this->mproduct->update('product',$pk,$Udata);
-		redirect ('product/readProduct');
-		
-	}
+		redirect ('Product/readProduct');}
 }
 ?>
