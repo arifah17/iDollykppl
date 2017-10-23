@@ -59,23 +59,23 @@
                             <form method="post" action="<?php echo base_url()."index.php/Product/addProduct"; ?>" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label>ID.product</label>
-                                    <input name="id" class="form-control" placeholder="e.g: C113">
+                                    <input name="id" class="form-control" placeholder="e.g: C113" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Product Name</label>
-                                    <input name="nama_product" class="form-control" placeholder="e.g: Risoles">
+                                    <input name="nama_product" class="form-control" placeholder="e.g: Risoles" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Deskripsi</label>
-                                    <textarea name="deskripsi" class="form-control" rows="3" placeholder="Tulis Deskripsi product"></textarea>
+                                    <textarea name="deskripsi" class="form-control" rows="3" placeholder="Tulis Deskripsi product" required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label>Harga</label>
-                                    <input name="harga" class="form-control" placeholder="e.g: 7500">
+                                    <input name="harga" class="form-control" placeholder="e.g: 7500" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Kategori</label>
-                                    <select name="kategori" class="form-control">
+                                    <select name="kategori" class="form-control" required>
                                     <?php foreach ($data as $x ) {?>
                                        <option><?=$x['id_cat']?></option>
                                     <?php } ?>
