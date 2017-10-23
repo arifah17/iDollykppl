@@ -1,76 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="CodeIgniter Application Test Suite" tests="49" assertions="62" failures="2" errors="0" time="3.725799">
-    <testsuite name="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" fullPackage="Admin" tests="7" assertions="9" failures="0" errors="0" time="0.930524">
-      <testcase name="test_index" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="10" assertions="1" time="0.193175"/>
-      <testcase name="test_admin_login" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="16" assertions="1" time="0.362629"/>
-      <testcase name="test_admin_login_fail" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="26" assertions="1" time="0.077015"/>
-      <testcase name="test_admin_login_nopassword" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="36" assertions="1" time="0.058599"/>
-      <testcase name="test_tabpesanan" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="47" assertions="1" time="0.089437"/>
-      <testcase name="test_updateStatus" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="55" assertions="1" time="0.081686"/>
-      <testcase name="test_logout" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="63" assertions="3" time="0.067983"/>
+  <testsuite name="CodeIgniter Application Test Suite" tests="49" assertions="63" failures="3" errors="0" time="2.788850">
+    <testsuite name="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" fullPackage="Admin" tests="7" assertions="9" failures="0" errors="0" time="0.424658">
+      <testcase name="test_index" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="10" assertions="1" time="0.068149"/>
+      <testcase name="test_admin_login" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="16" assertions="1" time="0.071973"/>
+      <testcase name="test_admin_login_fail" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="26" assertions="1" time="0.058938"/>
+      <testcase name="test_admin_login_nopassword" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="36" assertions="1" time="0.053556"/>
+      <testcase name="test_tabpesanan" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="47" assertions="1" time="0.073972"/>
+      <testcase name="test_updateStatus" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="55" assertions="1" time="0.050708"/>
+      <testcase name="test_logout" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="63" assertions="3" time="0.047362"/>
     </testsuite>
-    <testsuite name="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" fullPackage="Home" tests="14" assertions="14" failures="0" errors="0" time="0.702041">
-      <testcase name="test_home" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="13" assertions="1" time="0.095610"/>
-      <testcase name="test_menu" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="19" assertions="1" time="0.076823"/>
-      <testcase name="test_visitdol" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="25" assertions="1" time="0.036240"/>
-      <testcase name="test_makanan" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="31" assertions="1" time="0.102970"/>
-      <testcase name="test_makanan_menu" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="39" assertions="1" time="0.052650"/>
-      <testcase name="test_viewKain" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="47" assertions="1" time="0.044852"/>
-      <testcase name="test_viewSepatu" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="55" assertions="1" time="0.046925"/>
-      <testcase name="test_aboutuslog" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="63" assertions="1" time="0.036256"/>
-      <testcase name="test_aboutus" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="70" assertions="1" time="0.045725"/>
-      <testcase name="test_visitdolog" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="77" assertions="1" time="0.036862"/>
-      <testcase name="test_pesan" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="83" assertions="1" time="0.051927"/>
-      <testcase name="test_order" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="89" assertions="1" time="0.035590"/>
-      <testcase name="test_method_404" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="96" assertions="1" time="0.034100"/>
-      <testcase name="test_APPPATH" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="102" assertions="1" time="0.005511"/>
+    <testsuite name="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" fullPackage="Home" tests="14" assertions="14" failures="2" errors="0" time="0.497623">
+      <testcase name="test_home" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="13" assertions="1" time="0.039218"/>
+      <testcase name="test_menu" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="19" assertions="1" time="0.043540"/>
+      <testcase name="test_visitdol" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="25" assertions="1" time="0.034436">
+        <failure type="PHPUnit_Framework_ExpectationFailedException">Home_test::test_visitdol
+Failed asserting that 'Unable to load the requested file: sebelum/visit.php' contains "&lt;h1 class="page-header"&gt;VISIT DOLLY&lt;/h1&gt;".
+
+C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php:28
+</failure>
+      </testcase>
+      <testcase name="test_makanan" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="31" assertions="1" time="0.045236"/>
+      <testcase name="test_makanan_menu" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="39" assertions="1" time="0.048521"/>
+      <testcase name="test_viewKain" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="47" assertions="1" time="0.041010"/>
+      <testcase name="test_viewSepatu" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="55" assertions="1" time="0.041881"/>
+      <testcase name="test_aboutuslog" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="63" assertions="1" time="0.034916"/>
+      <testcase name="test_aboutus" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="70" assertions="1" time="0.036899"/>
+      <testcase name="test_visitdolog" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="77" assertions="1" time="0.033250">
+        <failure type="PHPUnit_Framework_ExpectationFailedException">Home_test::test_visitdolog
+Failed asserting that 'Unable to load the requested file: sebelum/visit.php' contains "&lt;title&gt;iDolly&lt;/title&gt;".
+
+C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php:80
+</failure>
+      </testcase>
+      <testcase name="test_pesan" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="83" assertions="1" time="0.034254"/>
+      <testcase name="test_order" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="89" assertions="1" time="0.034133"/>
+      <testcase name="test_method_404" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="96" assertions="1" time="0.024754"/>
+      <testcase name="test_APPPATH" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="102" assertions="1" time="0.005575"/>
     </testsuite>
-    <testsuite name="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" fullPackage="MyController" tests="16" assertions="26" failures="0" errors="0" time="1.000823">
-      <testcase name="test_index" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="17" assertions="1" time="0.103921"/>
-      <testcase name="test_home" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="21" assertions="1" time="0.052447"/>
-      <testcase name="test_login" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="26" assertions="1" time="0.066430"/>
-      <testcase name="test_login_kosong" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="35" assertions="2" time="0.056696"/>
-      <testcase name="test_login_kosongpass" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="45" assertions="2" time="0.055527"/>
-      <testcase name="test_login_kosonguser" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="55" assertions="2" time="0.055337"/>
-      <testcase name="test_login_gagal" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="65" assertions="2" time="0.049488"/>
-      <testcase name="test_logout" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="75" assertions="3" time="0.048132"/>
-      <testcase name="test_createuser" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="83" assertions="1" time="0.084668"/>
-      <testcase name="test_createuser_usernamesama" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="98" assertions="1" time="0.074683"/>
-      <testcase name="test_createuser_notvalid" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="113" assertions="2" time="0.076436"/>
-      <testcase name="test_createuser_emailtdksesuai" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="128" assertions="2" time="0.073649"/>
-      <testcase name="test_createuser_phonekosong" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="143" assertions="2" time="0.071082"/>
-      <testcase name="test_createuser_kosongsemua" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="158" assertions="2" time="0.065836"/>
-      <testcase name="test_method_404" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="173" assertions="1" time="0.041203"/>
-      <testcase name="test_APPPATH" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="179" assertions="1" time="0.025288"/>
+    <testsuite name="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" fullPackage="MyController" tests="16" assertions="26" failures="0" errors="0" time="0.935006">
+      <testcase name="test_index" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="17" assertions="1" time="0.053649"/>
+      <testcase name="test_home" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="21" assertions="1" time="0.054338"/>
+      <testcase name="test_login" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="26" assertions="1" time="0.067258"/>
+      <testcase name="test_login_kosong" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="35" assertions="2" time="0.048001"/>
+      <testcase name="test_login_kosongpass" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="45" assertions="2" time="0.048093"/>
+      <testcase name="test_login_kosonguser" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="55" assertions="2" time="0.050194"/>
+      <testcase name="test_login_gagal" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="65" assertions="2" time="0.055041"/>
+      <testcase name="test_logout" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="75" assertions="3" time="0.049081"/>
+      <testcase name="test_createuser" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="83" assertions="1" time="0.084082"/>
+      <testcase name="test_createuser_usernamesama" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="98" assertions="1" time="0.074976"/>
+      <testcase name="test_createuser_notvalid" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="113" assertions="2" time="0.074071"/>
+      <testcase name="test_createuser_emailtdksesuai" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="128" assertions="2" time="0.069591"/>
+      <testcase name="test_createuser_phonekosong" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="143" assertions="2" time="0.074872"/>
+      <testcase name="test_createuser_kosongsemua" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="158" assertions="2" time="0.065090"/>
+      <testcase name="test_method_404" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="173" assertions="1" time="0.041619"/>
+      <testcase name="test_APPPATH" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="179" assertions="1" time="0.025050"/>
     </testsuite>
-    <testsuite name="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" fullPackage="Product" tests="7" assertions="6" failures="2" errors="0" time="0.692201">
-      <testcase name="test_index" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="22" assertions="1" time="0.058188"/>
-      <testcase name="test_readProduct" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="29" assertions="1" time="0.088087"/>
-      <testcase name="test_addProduct_gagal" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="35" assertions="1" time="0.075345"/>
-      <testcase name="test_addProduct" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="59" assertions="1" time="0.245184">
+    <testsuite name="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" fullPackage="Product" tests="7" assertions="7" failures="1" errors="0" time="0.546459">
+      <testcase name="test_index" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="22" assertions="1" time="0.064041"/>
+      <testcase name="test_readProduct" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="29" assertions="1" time="0.065914"/>
+      <testcase name="test_addProduct_gagal" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="35" assertions="1" time="0.068305"/>
+      <testcase name="test_addProduct" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="59" assertions="1" time="0.137482">
         <failure type="PHPUnit_Framework_ExpectationFailedException">Product_test::test_addProduct
 Failed asserting that 1 matches expected 0.
 
 C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php:79
 </failure>
       </testcase>
-      <testcase name="test_do_delete" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="85" assertions="1" time="0.057591">
-        <failure type="PHPUnit_Framework_ExpectationFailedException">Product_test::test_do_delete
-Failed asserting that 1 matches expected 0.
-
-C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php:92
-</failure>
-      </testcase>
-      <testcase name="test_do_update" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="96" assertions="1" time="0.063190"/>
-      <testcase name="test_Updatedata_tanpaFoto" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="104" assertions="0" time="0.104616"/>
+      <testcase name="test_do_delete" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="85" assertions="2" time="0.055767"/>
+      <testcase name="test_do_update" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="96" assertions="1" time="0.063122"/>
+      <testcase name="test_Updatedata_tanpaFoto" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="104" assertions="0" time="0.091828"/>
     </testsuite>
-    <testsuite name="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" fullPackage="ShoppingCart" tests="5" assertions="7" failures="0" errors="0" time="0.400210">
-      <testcase name="test_beli" class="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" line="24" assertions="1" time="0.097066"/>
-      <testcase name="test_clear_cart" class="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" line="35" assertions="2" time="0.071089"/>
-      <testcase name="test_addOrder_cartkosong" class="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" line="44" assertions="2" time="0.051955"/>
-      <testcase name="test_addOrder" class="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" line="55" assertions="1" time="0.111073"/>
-      <testcase name="test_addOrder_fail" class="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" line="65" assertions="1" time="0.069027"/>
+    <testsuite name="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" fullPackage="ShoppingCart" tests="5" assertions="7" failures="0" errors="0" time="0.385104">
+      <testcase name="test_beli" class="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" line="24" assertions="1" time="0.085318"/>
+      <testcase name="test_clear_cart" class="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" line="35" assertions="2" time="0.076800"/>
+      <testcase name="test_addOrder_cartkosong" class="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" line="44" assertions="2" time="0.049494"/>
+      <testcase name="test_addOrder" class="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" line="55" assertions="1" time="0.098830"/>
+      <testcase name="test_addOrder_fail" class="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" line="65" assertions="1" time="0.074662"/>
     </testsuite>
   </testsuite>
 </testsuites>
