@@ -32,7 +32,7 @@ class Product_test extends TestCase{
         $output = $this->request('GET','Product/readProduct');
         $this->assertContains('<title>Product List</title>', $output); 
     }
-        public function test_addProduct_gagal(){
+    public function test_addProduct_gagal(){
         $_SESSION['username'] = 'pbw';
         $_SESSION['role'] = 'admin';
         $filename = '';
@@ -85,7 +85,7 @@ class Product_test extends TestCase{
    public function test_do_delete(){
         $_SESSION['username'] = 'pbw';
         $_SESSION['role'] = 'admin';
-        $pid = '26';//24,25,26,27
+        $pid = '24';//24,25,26,27
         $awal = $this->CI->db->count_all_results('product',array('id'=>$pid));
         $output = $this->request('POST','product/do_delete/'.$pid);
         $akhir = $this->CI->db->count_all_results('product',array('id'=>$pid));

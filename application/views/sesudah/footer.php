@@ -8,7 +8,6 @@
 					<ul>
 						<li><a href="<?php echo base_url().'index.php/Home/home'?>">Home</a></li>
 							<li><a href="<?php echo base_url().'index.php/Home/menulog'?>">Menu</a></li>
-							<li><a href="<?php echo base_url().'index.php/Home/visitdol'?>">Visit Dolly</a></li>
 							<li><a href="<?php echo base_url().'index.php/Home/aboutuslog'?>">About Us</a></li>
 					</ul>
 				</div>
