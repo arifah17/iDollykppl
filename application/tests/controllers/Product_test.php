@@ -45,8 +45,8 @@ class Product_test extends TestCase{
         $this->request->setFiles($files);
         $totalrow = $this->objl->getTotalRow('21','ini nyoba gagal','coba coba gagal','5000','3','');
         $this->request('POST','Product/addProduct',
-        ['id'=>'',
-         'nama_product'=>'ini nyoba gagal',
+        ['id'=>'21',
+         'nama_product'=>'',
          'deskripsi'=>'coba coba gagal',
          'harga'=>'5000',
           'kategori'=>'3',
