@@ -29,7 +29,6 @@ class MyController_test extends TestCase
                 'username' => 'haloki',
                 'pass' => 'halohalo',
             ]);
-        //$this->assertRedirect('');
         $this->assertEquals('haloki', $_SESSION['username']);
     }
     
@@ -96,17 +95,62 @@ class MyController_test extends TestCase
         $this->objl->deleteRow('hulahup','hulala','hulahula@gmail.com', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');
     }
     
+     public function test_createuser_usernamesama(){
+        $totalrow=$this->objl->getTotalRow('haloki','hulala','hulahula@gmail.com', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');
+        $this->request('POST','MyController/aksi',
+                ['name'=>'hulala',
+                'phone'=>'085674561210',
+                'address'=>'keputih gang 1',
+                'email'=>'hulahula@gmail.com',
+                'username'=>'haloki',//username sama
+                'password'=>'halodea1',
+                'confirmpw'=>'halodea1']);
+        $totalrowafter= $this->objl->getTotalRow('haloki','hulala','hulahula@gmail.com', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');
+        $this->assertEquals($totalrowafter, $totalrow);
+    }
+    
+    
    public function test_createuser_notvalid(){
         $totalrow=$this->objl->getTotalRow('hulahup','hulala','arifahkinasih@gmail.com', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');
         $output = $this->request('POST','MyController/aksi',
                 ['name'=>'hulala',
                 'phone'=>'085674561210',
                 'address'=>'keputih gang 1',
-                'email'=>'arifahkinasih@gmail.com',
-                'username'=>'hulahup',//same username
+                'email'=>'arifahkinasih@gmail.com',//same email
+                'username'=>'hulahup',
                 'password'=>'halodea1',
                 'confirmpw'=>'halodea1']);
         $totalrowafter= $this->objl->getTotalRow('hulahup','hulala','arifahkinasih@gmail.com', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');
+        $this->assertEquals($totalrowafter, $totalrow);
+        $this->assertRedirect('MyController/home');
+    }
+    
+    public function test_createuser_emailtdksesuai(){
+        $totalrow=$this->objl->getTotalRow('hulahup','hulala','arifahkinasih', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');
+        $output = $this->request('POST','MyController/aksi',
+                ['name'=>'hulala',
+                'phone'=>'085674561210',
+                'address'=>'keputih gang 1',
+                'email'=>'arifahkinasih',//same email
+                'username'=>'hulahup',
+                'password'=>'halodea1',
+                'confirmpw'=>'halodea1']);
+        $totalrowafter= $this->objl->getTotalRow('hulahup','hulala','arifahkinasih', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');
+        $this->assertEquals($totalrowafter, $totalrow);
+        $this->assertRedirect('MyController/home');
+    }
+    
+       public function test_createuser_kosongsemua(){
+        $totalrow=$this->objl->getTotalRow('','','', '', '', '');
+        $output = $this->request('POST','MyController/aksi',
+                ['name'=>'',
+                'phone'=>'',
+                'address'=>'',
+                'email'=>'',
+                'username'=>'',
+                'password'=>'',
+                'confirmpw'=>'']);
+        $totalrowafter= $this->objl->getTotalRow('','','', '', '', '');
         $this->assertEquals($totalrowafter, $totalrow);
         $this->assertRedirect('MyController/home');
     }
