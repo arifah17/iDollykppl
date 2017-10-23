@@ -26,15 +26,27 @@ class mproduct extends CI_Model{
 		$this->db->update($table,$data,$pk);
 	}
 
-        public function getTotalRow($id, $nama_product, $deskripsi, $harga, $kategori){
+        public function getTotalRow($id, $nama_product, $deskripsi, $harga, $kategori,$gambar){
             $this->db->where('id',$id);
             $this->db->where('nama_product',$nama_product);
             $this->db->where('deskripsi',$deskripsi);
             $this->db->where('harga',$harga);
             $this->db->where('kategori',$kategori);
+            $this->db->where('gambar',$gambar);
             $this->db->from('product');
             $query= $this->db->get();
             return $query->num_rows();}
+          
+        public function deleteRow($id, $nama_product, $deskripsi, $harga, $kategori,$gambar){
+            $this->db->where('id',$id);
+            $this->db->where('nama_product',$nama_product);
+            $this->db->where('deskripsi',$deskripsi);
+            $this->db->where('harga',$harga);
+            $this->db->where('kategori',$kategori);
+            $this->db->where('gambar',$gambar);
+            $this->db->delete('product');
+        }
+        
        
 	public function getPesanan(){
 		$this->db->select('*');

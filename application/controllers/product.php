@@ -46,11 +46,7 @@ class Product extends CI_Controller {
 			'gambar' => $this->upload->data('file_name')
 			);
 		$isi = $this->mproduct->addPro('product', $data_insert);
-		if($isi>=1){
-			redirect('product/readProduct');
-			}else {
-			redirect('product/readProduct');
-			}
+                redirect('Product/readProduct');
 		}
 	}
 	function readProduct() {
@@ -62,10 +58,7 @@ class Product extends CI_Controller {
 	public function do_delete($id)	{
 		//$pk = array('kode_barang'=>$kode_barang);
 		$del = $this->mproduct->DeleteProduct('product',$id);
-		if($del>=1){
-			redirect('product/readProduct');
-		} else {echo "gagal"; }
-	}
+			redirect('Product/readProduct');}
 
 	public function do_update($id){
 		$pk = array('id'=>$id);
