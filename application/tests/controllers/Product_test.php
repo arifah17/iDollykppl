@@ -32,7 +32,7 @@ class Product_test extends TestCase{
         $output = $this->request('GET','Product/readProduct');
         $this->assertContains('<title>Product List</title>', $output); 
     }
-        public function test_addProduct_gagal(){
+    public function test_addProduct_gagal(){
         $_SESSION['username'] = 'pbw';
         $_SESSION['role'] = 'admin';
         $filename = '';
@@ -66,15 +66,9 @@ class Product_test extends TestCase{
             'type' => 'image/png',
             'tmp_name' => $filepath
         ]];
-<<<<<<< HEAD
-        $this->request->setFiles($files   b0..);
-        $totalrow = $this->objl->getTotalRow('20','ini nyoba juga','coba coba lagi','5000','3');
-        $this->request('POST','Product/addProduct',
-=======
         $this->request->setFiles($files);
         $totalrow = $this->objl->getTotalRow('20','ini nyoba juga','coba coba lagi','5000','3','3.png');
         $output = $this->request('POST','Product/addProduct',
->>>>>>> 064e9c4be6d190623f690c300fd7619c68182e3b
         ['id'=>'20',
          'nama_product'=>'ini nyoba juga',
          'deskripsi'=>'coba coba lagi',

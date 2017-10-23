@@ -37,7 +37,8 @@ class  Admin_test extends TestCase{
         $this->request('POST', ['admin','login'],
             [
                 'username' => 'pbw',
-                'pass' => '',
+                'pass' => ''
+                . '',
             ]);
         //$this->assertRedirect('admin/index');
         $this->assertFalse( isset($_SESSION['username']) );
