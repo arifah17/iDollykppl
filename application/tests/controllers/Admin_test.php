@@ -33,6 +33,16 @@ class  Admin_test extends TestCase{
         $this->assertFalse( isset($_SESSION['username']) );
     }
     
+    public function test_admin_login_nopassword(){
+        $this->request('POST', ['admin','login'],
+            [
+                'username' => 'pbw',
+                'pass' => '',
+            ]);
+        //$this->assertRedirect('admin/index');
+        $this->assertFalse( isset($_SESSION['username']) );
+    }
+    
     public function test_tabpesanan(){
         $_SESSION['username'] = 'pbw';
         $_SESSION['role'] = 'admin';

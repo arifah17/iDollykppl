@@ -64,7 +64,7 @@ class Product_test extends TestCase{
             'type' => 'image/png',
             'tmp_name' => $filepath
         ]];
-        $this->request->setFiles($files);
+        $this->request->setFiles($files   b0..);
         $totalrow = $this->objl->getTotalRow('20','ini nyoba juga','coba coba lagi','5000','3');
         $this->request('POST','Product/addProduct',
         ['id'=>'20',
