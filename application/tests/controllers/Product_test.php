@@ -43,14 +43,14 @@ class Product_test extends TestCase{
             'tmp_name' => $filepath
         ]];
         $this->request->setFiles($files);
-        $totalrow = $this->objl->getTotalRow('21','ini nyoba gagal','coba coba gagal','5000','3');
+        $totalrow = $this->objl->getTotalRow('21','ini nyoba gagal','coba coba gagal','5000','3','');
         $this->request('POST','Product/addProduct',
         ['id'=>'21',
          'nama_product'=>'ini nyoba gagal',
          'deskripsi'=>'coba coba gagal',
          'harga'=>'5000',
           'kategori'=>'3']);
-        $totalRowafter = $this->objl->getTotalRow('21','ini nyoba gagal','coba coba gagal','5000','3');
+        $totalRowafter = $this->objl->getTotalRow('21','ini nyoba gagal','coba coba gagal','5000','3','');
         $this->request($totalRowafter,$totalrow); 
     }
     
@@ -65,15 +65,17 @@ class Product_test extends TestCase{
             'tmp_name' => $filepath
         ]];
         $this->request->setFiles($files);
-        $totalrow = $this->objl->getTotalRow('20','ini nyoba juga','coba coba lagi','5000','3');
+        $totalrow = $this->objl->getTotalRow('20','ini nyoba juga','coba coba lagi','5000','3','3.png');
         $this->request('POST','Product/addProduct',
         ['id'=>'20',
          'nama_product'=>'ini nyoba juga',
          'deskripsi'=>'coba coba lagi',
          'harga'=>'5000',
-          'kategori'=>'3']);
-        $totalRowafter = $this->objl->getTotalRow('20','ini nyoba juga','coba coba lagi','5000','3');
+         'kategori'=>'3',
+         'gambar' =>'3.png']);
+        $totalRowafter = $this->objl->getTotalRow('20','ini nyoba juga','coba coba lagi','5000','3','3.png');
         $this->request($totalRowafter,$totalrow+1); 
+        $this->objl->deleteRow('20','ini nyoba juga','coba coba lagi','5000','3','3.png');
     }
     
 
@@ -109,7 +111,7 @@ class Product_test extends TestCase{
             'tmp_name' => $filepath
         ]];
         $this->request->setFiles($files);
-        $totalrow = $this->objl->getTotalRow($id,'ini nyoba update','coba coba lagi','5000','3');
+        $totalrow = $this->objl->getTotalRow($id,'ini nyoba update','coba coba lagi','5000','3','');
         $this->request('POST','Product/Updatedata/'.$id,
         ['id'=>$id,
          'nama_product'=>'ini nyoba update',
@@ -117,7 +119,7 @@ class Product_test extends TestCase{
          'harga'=>'5000',
          'kategori'=>'3',
          'gambar' => '']);
-        $totalRowafter = $this->objl->getTotalRow($id,'ini nyoba update','coba coba lagi','5000','3');
+        $totalRowafter = $this->objl->getTotalRow($id,'ini nyoba update','coba coba lagi','5000','3','');
         $this->request($totalRowafter,$totalrow);
     }
 }
