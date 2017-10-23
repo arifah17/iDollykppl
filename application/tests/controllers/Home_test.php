@@ -22,11 +22,6 @@ class Home_test extends TestCase
 		$this->assertContains('<h3 class="w3_agile_head">Our Product</h3>', $output);
 	}
         
-        public function test_visitdol()
-	{
-		$output = $this->request('GET', 'Home/visitdol');
-		$this->assertContains('<h1 class="page-header">VISIT DOLLY</h1>', $output);
-	}
 
         public function test_makanan()
 	{
@@ -73,13 +68,7 @@ class Home_test extends TestCase
 		$output = $this->request('GET', 'Home/aboutus');
 		$this->assertContains('<title>iDolly</title>', $output);
         }
-        
-        public function test_visitdolog(){
-                $_SESSION['username']='haloki';
-                $output = $this->request('GET', 'Home/visitdollog');
-		$this->assertContains('<title>iDolly</title>', $output);
-        }
-        
+              
         public function test_pesan(){
                 $_SESSION['username']='haloki';
                 $output = $this->request('GET', 'Home/pesan');

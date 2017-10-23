@@ -45,8 +45,8 @@ class Product_test extends TestCase{
         $this->request->setFiles($files);
         $totalrow = $this->objl->getTotalRow('21','ini nyoba gagal','coba coba gagal','5000','3','');
         $this->request('POST','Product/addProduct',
-        ['id'=>'',
-         'nama_product'=>'ini nyoba gagal',
+        ['id'=>'21',
+         'nama_product'=>'',
          'deskripsi'=>'coba coba gagal',
          'harga'=>'5000',
           'kategori'=>'3',
@@ -85,7 +85,7 @@ class Product_test extends TestCase{
    public function test_do_delete(){
         $_SESSION['username'] = 'pbw';
         $_SESSION['role'] = 'admin';
-        $pid = '26';//24,25,26,27
+        $pid = '24';//24,25,26,27
         $awal = $this->CI->db->count_all_results('product',array('id'=>$pid));
         $output = $this->request('POST','product/do_delete/'.$pid);
         $akhir = $this->CI->db->count_all_results('product',array('id'=>$pid));
