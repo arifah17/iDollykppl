@@ -1,395 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="CodeIgniter Application Test Suite" tests="23" assertions="27" failures="2" errors="0" time="1.220516">
-    <testsuite name="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" fullPackage="Admin" tests="4" assertions="4" failures="2" errors="0" time="0.281202">
-      <testcase name="test_index" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="3" assertions="1" time="0.068903"/>
-      <testcase name="test_admin_login" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="9" assertions="1" time="0.135458">
-        <failure type="PHPUnit_Framework_ExpectationFailedException">Admin_test::test_admin_login
-Failed asserting that null matches expected 'pbw'.
-
-C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php:16
-</failure>
-      </testcase>
-      <testcase name="test_admin_login_fail" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="19" assertions="1" time="0.038380"/>
-      <testcase name="test_tabproduct" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="29" assertions="1" time="0.038461">
-        <failure type="PHPUnit_Framework_ExpectationFailedException">Admin_test::test_tabproduct
-Failed asserting that '&lt;!--
-author: W3layouts
-author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---&gt;
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;iDolly&lt;/title&gt;
-&lt;!-- for-mobile-apps --&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
-&lt;meta name="keywords" content="Monetary Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" /&gt;
-&lt;script type="application/x-javascript"&gt; addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } &lt;/script&gt;
-&lt;!-- //for-mobile-apps --&gt;
-&lt;link href="http://localhost/Dolly/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /&gt;
-&lt;link href="http://localhost/Dolly/assets/css/style.css" rel="stylesheet" type="text/css" media="all" /&gt;
-&lt;!-- js --&gt;
-&lt;script type="text/javascript" src="http://localhost/Dolly/assets/js/jquery-2.1.4.min.js"&gt;&lt;/script&gt;
-&lt;!-- //js --&gt;
-&lt;link rel="stylesheet" href="http://localhost/Dolly/assets/css/flexslider.css" type="text/css" media="screen" property="" /&gt;
-&lt;link href="http://localhost/Dolly/assets/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" /&gt;
-&lt;!-- font-awesome icons --&gt;
-&lt;link rel="stylesheet" href="http://localhost/Dolly/assets/css/font-awesome.min.css" /&gt;
-&lt;!-- //font-awesome icons --&gt;
-&lt;link href="//fonts.googleapis.com/css?family=Varela+Round&amp;subset=hebrew" rel="stylesheet"&gt;
-&lt;link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'&gt;
-
-&lt;/head&gt;
-	
-&lt;body&gt;
-&lt;!-- banner --&gt;
-	&lt;div class="banner"&gt;
-		&lt;div class="container"&gt;
-			&lt;nav class="navbar navbar-default"&gt;
-				&lt;div class="navbar-header navbar-left"&gt;
-					&lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"&gt;
-						&lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
-						&lt;span class="icon-bar"&gt;&lt;/span&gt;
-						&lt;span class="icon-bar"&gt;&lt;/span&gt;
-						&lt;span class="icon-bar"&gt;&lt;/span&gt;
-					&lt;/button&gt;
-					&lt;h2&gt;&lt;a class="navbar-brand" href="http://localhost/Dolly/index.php"&gt;iDolly&lt;/a&gt;&lt;/h2&gt;
-				&lt;/div&gt;
-				&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
-				&lt;div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1"&gt;
-					&lt;nav class="cl-effect-13" id="cl-effect-13"&gt;
-						&lt;ul class="nav navbar-nav"&gt;
-							&lt;li class="active"&gt;&lt;a href="http://localhost/Dolly/index.php/Home/home"&gt;Home&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="http://localhost/Dolly/index.php/Home/menu"&gt;Menu&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="http://localhost/Dolly/index.php/Home/visitdol"&gt;Visit Dolly&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="http://localhost/Dolly/index.php/Home/aboutus"&gt;About Us&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="http://localhost/Dolly/index.php/Home/mailus"&gt;Mail Us&lt;/a&gt;&lt;/li&gt;
-						&lt;/ul&gt;
-						&lt;div class="w3_agile_login"&gt;
-							&lt;a href="#small-dialog" class="play-icon popup-with-zoom-anim"&gt;&lt;i class="fa fa-user" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
-						&lt;/div&gt;
-					&lt;/nav&gt;
-				&lt;/div&gt;
-			&lt;/nav&gt;
-			&lt;div class="agileits_w3layouts_banner_info"&gt;
-				&lt;h2&gt;iDolly&lt;/h2&gt;
-				&lt;p&gt;Lebih baik menyalakan lilin daripada mengutuk kegelapan&lt;/p&gt;
-				&lt;div class="agileits_w3layouts_banner_info_pos"&gt;
-				&lt;/div&gt;
-				&lt;div class="agileits_w3layouts_banner_info_pos1"&gt;
-					&lt;h4&gt;(+62) 85  123 456 789&lt;/h4&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-			&lt;div class="thim-click-to-bottom"&gt;
-				&lt;a href="#about" class="scroll"&gt;
-					&lt;i class="fa  fa-chevron-down"&gt;&lt;/i&gt;
-				&lt;/a&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;!-- //banner --&gt;	
-
-&lt;!-- pop-up-box --&gt;
-	&lt;div id="small-dialog" class="mfp-hide w3ls_small_dialog wthree_pop"&gt;
-		&lt;h3&gt;Sign In&lt;/h3&gt;		
-		&lt;div class="agileits_modal_body"&gt;
-			&lt;form method="post" action="http://localhost/Dolly/index.php/MyController/login"&gt;
-				&lt;div class="agileits_w3layouts_user"&gt;
-					&lt;i class="fa fa-user" aria-hidden="true"&gt;&lt;/i&gt;
-					&lt;input type="text" name="username" placeholder="User Name" required=""&gt;
-				&lt;/div&gt;
-				&lt;div class="agileits_w3layouts_user"&gt;
-					&lt;i class="fa fa-key" aria-hidden="true"&gt;&lt;/i&gt;
-					&lt;input type="password" name="pass" placeholder="Password" required=""&gt;
-				&lt;/div&gt;
-				&lt;div class="agile_remember"&gt;
-					&lt;div class="agile_remember_left"&gt;
-						&lt;div class="check"&gt;
-							&lt;label class="checkbox"&gt;&lt;input type="checkbox" name="checkbox"&gt;&lt;i&gt; &lt;/i&gt;remember me&lt;/label&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-					&lt;div class="agile_remember_right"&gt;
-						&lt;a href="#"&gt;Forgot Password?&lt;/a&gt;
-					&lt;/div&gt;
-					&lt;div class="clearfix"&gt; &lt;/div&gt;
-				&lt;/div&gt;
-				&lt;input type="submit" value="Sign In"&gt;
-			&lt;/form&gt;
-			&lt;h5&gt;Don't have an account? &lt;a href="#small-dialog1" class="play-icon popup-with-zoom-anim"&gt;Sign Up&lt;/a&gt;&lt;/h5&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div id="small-dialog1" class="mfp-hide w3ls_small_dialog wthree_pop"&gt;
-		&lt;h3&gt;Sign Up&lt;/h3&gt;		
-		&lt;div class="agileits_modal_body"&gt;
-			
-			&lt;form method="post" action="http://localhost/Dolly/index.php/MyController/aksi"&gt;
-				&lt;h4&gt;Profile information :&lt;/h4&gt;
-				&lt;div class="agileits_w3layouts_user"&gt;
-					&lt;i class="fa fa-user" aria-hidden="true"&gt;&lt;/i&gt;
-					&lt;input type="text" name="name" placeholder="Name" required=""&gt;
-				&lt;/div&gt;
-				&lt;div class="agileits_w3layouts_user"&gt;
-					&lt;i class="fa fa-phone" aria-hidden="true"&gt;&lt;/i&gt;
-					&lt;input type="text" name="phone" placeholder="Phone" required=""&gt;
-				&lt;/div&gt;
-				&lt;div class="agileits_w3layouts_user"&gt;
-					&lt;i class="fa fa-map-marker" aria-hidden="true"&gt;&lt;/i&gt;
-					&lt;input type="text" name="address" placeholder="Address" required=""&gt;
-				&lt;/div&gt;
-				&lt;h4&gt;Login information :&lt;/h4&gt;
-				&lt;div class="agileits_w3layouts_user"&gt;
-					&lt;i class="fa fa-envelope-o" aria-hidden="true"&gt;&lt;/i&gt;
-					&lt;input type="email" name="email" placeholder="Email" required=""&gt;
-				&lt;/div&gt;
-				&lt;div class="agileits_w3layouts_user agileits_w3layouts_user_agileits"&gt;
-					&lt;i class="fa fa-user" aria-hidden="true"&gt;&lt;/i&gt;
-					&lt;input type="text" name="username" placeholder="Username" required=""&gt;
-				&lt;/div&gt;
-				&lt;div class="agileits_w3layouts_user"&gt;
-					&lt;i class="fa fa-key" aria-hidden="true"&gt;&lt;/i&gt;
-					&lt;input type="password" name="password" placeholder="Password" required=""&gt;
-				&lt;/div&gt;
-				&lt;div class="agileits_w3layouts_user"&gt;
-					&lt;i class="fa fa-key" aria-hidden="true"&gt;&lt;/i&gt;
-					&lt;input type="password" name="confirmpw" placeholder="Confrim Password" required=""&gt;
-				&lt;/div&gt;
-				&lt;br&gt;
-				&lt;p style="color: red"&gt;&lt;/p&gt;
-				&lt;input type="submit" value="Register"&gt;
-			&lt;/form&gt;
-			&lt;h5&gt;Already a member &lt;a href="#small-dialog" class="play-icon popup-with-zoom-anim"&gt;Sign In&lt;/a&gt;&lt;/h5&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;!-- //pop-up-box --&gt;
-&lt;script src="http://localhost/Dolly/assets/js/jquery.magnific-popup.js" type="text/javascript"&gt;&lt;/script&gt;
-&lt;script&gt;
-	$(document).ready(function() {
-	$('.popup-with-zoom-anim').magnificPopup({
-		type: 'inline',
-		fixedContentPos: false,
-		fixedBgPos: true,
-		overflowY: 'auto',
-		closeBtnInside: true,
-		preloader: false,
-		midClick: true,
-		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in'
-	});
-																	
-	});
-&lt;/script&gt;
-&lt;!-- banner-bottom --&gt;
-	&lt;div class="banner-bottom"&gt;
-		&lt;div class="container"&gt;
-			&lt;div class="w3_agileits_banner_bottom_grids"&gt;
-				&lt;div class="col-md-6 w3_agileits_banner_bottom_grid"&gt;
-					&lt;h3&gt;What We Do in &lt;span&gt;iDolly&lt;/span&gt;&lt;/h3&gt;
-					&lt;div class="wthree_banner_btm_grid"&gt;
-						&lt;div class="wthree_banner_btm_grid1"&gt;
-							&lt;h4&gt;Beli Produk&lt;/h4&gt;
-							&lt;p&gt; Membeli produk - produk rumahan asli buatan masyarakat Dolly.&lt;/p&gt;
-							&lt;div class="wthree_banner_btm_grid1_pos"&gt;
-								&lt;i class="fa fa-phone"  aria-hidden="true"&gt;&lt;/i&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-						&lt;div class="wthree_banner_btm_grid1"&gt;
-							&lt;h4&gt;Daftar Reseller&lt;/h4&gt;
-							&lt;p&gt;Menjadi reseller untuk membantu memasarkan produk - produk yang dibuat oleh masyarakat Dolly.&lt;/p&gt;
-							&lt;div class="wthree_banner_btm_grid1_pos"&gt;
-								&lt;i class="fa fa-key"  aria-hidden="true"&gt;&lt;/i&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-						&lt;div class="wthree_banner_btm_grid1"&gt;
-							&lt;h4&gt;Visit Dolly&lt;/h4&gt;
-							&lt;p&gt;Melakukan wisata edukasi di Kampung Dolly.&lt;/p&gt;
-							&lt;div class="wthree_banner_btm_grid1_pos"&gt;
-								&lt;i class="fa fa-map-marker" aria-hidden="true"&gt;&lt;/i&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-				&lt;/div&gt;
-				
-				&lt;div class="clearfix"&gt;&lt;/div&gt;
-				&lt;script type="text/javascript" src="http://localhost/Dolly/assets/js/jquery.glide.min.js"&gt;&lt;/script&gt;
-				&lt;script type="text/javascript"&gt;
-					$(function(){
-					  $('.slider').glide({
-						autoplay: 3500,
-						hoverpause: true, // set to false for nonstop rotate
-						arrowRightText: '&amp;rarr;',
-						arrowLeftText: '&amp;larr;'
-					  });
-					});
-				&lt;/script&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;!-- //banner-bottom --&gt;
-
-&lt;!-- about --&gt;
-	&lt;div class="about" id="about"&gt;
-		&lt;div class="col-md-6 agileinfo_about_left"&gt;	
-			&lt;img src="http://localhost/Dolly/assets/images/10.jpg" alt=" " class="img-responsive" /&gt;
-		&lt;/div&gt;
-		&lt;div class="col-md-6 agileinfo_about_right"&gt;
-			&lt;h3&gt;Who we are&lt;/h3&gt;
-			&lt;p&gt;Ingin mengenalkan Kampung Dolly yang dulunya di cap negatif.
-			Ingin mengenalkan Kampung Dolly yang sekarang.
-			Yang sekarang sudah menjadi sebuah tempat yang indah dan mempunyai banyak potensi untuk dikembangkan.
-			Ingin mengenalkan produk-produk lokal Dolly yang tak kalah dengan produk-produk lainnya.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;div class="clearfix"&gt; &lt;/div&gt;
-	&lt;/div&gt;
-&lt;!-- //about --&gt;
-
-&lt;!-- testimonials --&gt;
-	&lt;div class="testimonials"&gt;
-		&lt;div class="container"&gt;
-			&lt;h3 class="w3_agile_head"&gt;Testimonials&lt;/h3&gt;
-			&lt;p class="augue_agile"&gt;Lebih baik menyalakan lilin daripada mengutuk kegelapan&lt;/p&gt;
-			&lt;div class="w3_agileits_testimonial_grids"&gt;
-				&lt;section class="slider"&gt;
-					&lt;div class="flexslider"&gt;
-						&lt;ul class="slides"&gt;
-							&lt;li&gt;
-								&lt;div class="w3_agileits_testimonial_grid"&gt;
-									&lt;p&gt;&lt;i class="fa fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;
-										"Sepatunya bagus dan berkualitas serta harganya sangatlah terjangkau!"&lt;/p&gt;
-									&lt;img src="http://localhost/Dolly/assets/images/2.png" alt=" " class="img-responsive" /&gt;
-									&lt;h4&gt;Allen parker &lt;span&gt; Guru &lt;/span&gt;&lt;/h4&gt;
-								&lt;/div&gt;
-							&lt;/li&gt;
-							&lt;li&gt;
-								&lt;div class="w3_agileits_testimonial_grid"&gt;
-									&lt;p&gt;&lt;i class="fa fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;
-										"Makanannya lezat dan sangat sehat"&lt;/p&gt;
-									&lt;img src="http://localhost/Dolly/assets/images/6.png" alt=" " class="img-responsive" /&gt;
-									&lt;h4&gt;Rosy James &lt;span&gt; Guru &lt;/span&gt;&lt;/h4&gt;
-								&lt;/div&gt;
-							&lt;/li&gt;
-							&lt;li&gt;
-								&lt;div class="w3_agileits_testimonial_grid"&gt;
-									&lt;p&gt;&lt;i class="fa fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;
-										"Orumynya segar dan terasa beda apabila dibandingkan dengan produk-produk lainnya."&lt;/p&gt;
-									&lt;img src="http://localhost/Dolly/assets/images/5.png" alt=" " class="img-responsive" /&gt;
-									&lt;h4&gt;Crisp Ally &lt;span&gt; Dokter &lt;/span&gt;&lt;/h4&gt;
-								&lt;/div&gt;
-							&lt;/li&gt;
-						&lt;/ul&gt;
-					&lt;/div&gt;
-				&lt;/section&gt;
-				&lt;!-- flexSlider --&gt;
-					&lt;script defer src="http://localhost/Dolly/assets/js/jquery.flexslider.js"&gt;&lt;/script&gt;
-					&lt;script type="text/javascript"&gt;
-					$(window).load(function(){
-					  $('.flexslider').flexslider({
-						animation: "slide",
-						start: function(slider){
-						  $('body').removeClass('loading');
-						}
-					  });
-					});
-				  &lt;/script&gt;
-				&lt;!-- //flexSlider --&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;!-- //testimonials --&gt;
-&lt;!-- footer --&gt;
-	&lt;div class="footer"&gt;
-		&lt;div class="container"&gt;
-			&lt;h2&gt;&lt;a href="http://localhost/Dolly/index.php"&gt;iDolly&lt;/a&gt;&lt;/h2&gt;
-			&lt;h3&gt;(+62) 85 123 456 789&lt;/h3&gt;
-			&lt;div class="agileits_w3layouts_nav"&gt;
-				&lt;div class="agileits_w3layouts_nav_left"&gt;
-					&lt;ul&gt;
-							&lt;li&gt;&lt;a href="http://localhost/Dolly/index.php"&gt;Home&lt;/a&gt;&lt;/li&gt;
-							&lt;li class=""&gt;&lt;a href="http://localhost/Dolly/menu.php"&gt;Menu&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="http://localhost/Dolly/index.php/Home/visitdol"&gt;Visit Dolly&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="http://localhost/Dolly/index.php/Home/aboutus"&gt;About Us&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="http://localhost/Dolly/index.php/Home/mailus"&gt;Mail Us&lt;/a&gt;&lt;/li&gt;
-					&lt;/ul&gt;
-				&lt;/div&gt;
-				&lt;div class="agileits_w3layouts_nav_right"&gt;
-					&lt;ul&gt;
-						&lt;li&gt;&lt;a href="#" class="w3_agile_facebook"&gt;&lt;i class="fa fa-facebook" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href="#" class="agile_twitter"&gt;&lt;i class="fa fa-twitter" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href="#" class="w3_agile_dribble"&gt;&lt;i class="fa fa-dribbble" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href="#" class="w3_agile_vimeo"&gt;&lt;i class="fa fa-vimeo" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-					&lt;/ul&gt;
-				&lt;/div&gt;
-				&lt;div class="clearfix"&gt; &lt;/div&gt;
-			&lt;/div&gt;
-			&lt;p&gt;© 2017 iDolly | Design by &lt;a href="http://w3layouts.com/"&gt;W3layouts&lt;/a&gt;&lt;/p&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;!-- //footer --&gt;
-&lt;!-- for bootstrap working --&gt;
-	&lt;script src="http://localhost/Dolly/assets/js/bootstrap.js"&gt;&lt;/script&gt;
-&lt;!-- //for bootstrap working --&gt;
-&lt;!-- start-smooth-scrolling --&gt;
-&lt;script type="text/javascript" src="http://localhost/Dolly/assets/js/move-top.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="http://localhost/Dolly/assets/js/easing.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-&lt;/script&gt;
-&lt;!-- start-smooth-scrolling --&gt;
-&lt;!-- here stars scrolling icon --&gt;
-	&lt;script type="text/javascript"&gt;
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	&lt;/script&gt;
-&lt;!-- //here ends scrolling icon --&gt;
-&lt;/body&gt;
-&lt;/html&gt;' contains "&lt;title&gt;iDolly Admin Panel&lt;/title&gt;".
-
-C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php:32
-</failure>
-      </testcase>
+  <testsuite name="CodeIgniter Application Test Suite" tests="44" assertions="53" failures="0" errors="0" time="3.052033">
+    <testsuite name="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" fullPackage="Admin" tests="6" assertions="8" failures="0" errors="0" time="0.832771">
+      <testcase name="test_index" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="10" assertions="1" time="0.197199"/>
+      <testcase name="test_admin_login" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="16" assertions="1" time="0.301674"/>
+      <testcase name="test_admin_login_fail" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="26" assertions="1" time="0.094734"/>
+      <testcase name="test_tabpesanan" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="36" assertions="1" time="0.088598"/>
+      <testcase name="test_updateStatus" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="44" assertions="1" time="0.080476"/>
+      <testcase name="test_logout" class="Admin_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Admin_test.php" line="52" assertions="3" time="0.070090"/>
     </testsuite>
-    <testsuite name="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" fullPackage="Home" tests="11" assertions="11" failures="0" errors="0" time="0.429916">
-      <testcase name="test_home" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="13" assertions="1" time="0.040898"/>
-      <testcase name="test_menu" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="19" assertions="1" time="0.044788"/>
-      <testcase name="test_visitdol" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="25" assertions="1" time="0.036158"/>
-      <testcase name="test_mailus" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="31" assertions="1" time="0.039058"/>
-      <testcase name="test_makanan" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="37" assertions="1" time="0.050064"/>
-      <testcase name="test_makanan_menu" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="45" assertions="1" time="0.050679"/>
-      <testcase name="test_viewKain" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="53" assertions="1" time="0.042869"/>
-      <testcase name="test_viewSepatu" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="61" assertions="1" time="0.046698"/>
-      <testcase name="test_aboutus" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="69" assertions="1" time="0.040168"/>
-      <testcase name="test_method_404" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="86" assertions="1" time="0.031751"/>
-      <testcase name="test_APPPATH" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="92" assertions="1" time="0.006785"/>
+    <testsuite name="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" fullPackage="Home" tests="14" assertions="14" failures="0" errors="0" time="0.588693">
+      <testcase name="test_home" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="13" assertions="1" time="0.044323"/>
+      <testcase name="test_menu" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="19" assertions="1" time="0.043276"/>
+      <testcase name="test_visitdol" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="25" assertions="1" time="0.035517"/>
+      <testcase name="test_makanan" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="31" assertions="1" time="0.048345"/>
+      <testcase name="test_makanan_menu" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="39" assertions="1" time="0.048201"/>
+      <testcase name="test_viewKain" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="47" assertions="1" time="0.043505"/>
+      <testcase name="test_viewSepatu" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="55" assertions="1" time="0.040655"/>
+      <testcase name="test_aboutuslog" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="63" assertions="1" time="0.037408"/>
+      <testcase name="test_aboutus" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="70" assertions="1" time="0.042726"/>
+      <testcase name="test_visitdolog" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="77" assertions="1" time="0.051613"/>
+      <testcase name="test_pesan" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="83" assertions="1" time="0.059339"/>
+      <testcase name="test_order" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="89" assertions="1" time="0.052713"/>
+      <testcase name="test_method_404" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="96" assertions="1" time="0.035560"/>
+      <testcase name="test_APPPATH" class="Home_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Home_test.php" line="102" assertions="1" time="0.005512"/>
     </testsuite>
-    <testsuite name="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" fullPackage="MyController" tests="8" assertions="12" failures="0" errors="0" time="0.509398">
-      <testcase name="test_index" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="16" assertions="1" time="0.057875"/>
-      <testcase name="test_home" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="20" assertions="1" time="0.054954"/>
-      <testcase name="test_login" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="25" assertions="1" time="0.059820"/>
-      <testcase name="test_login_kosong" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="36" assertions="2" time="0.068772"/>
-      <testcase name="test_login_gagal" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="46" assertions="2" time="0.097196"/>
-      <testcase name="test_logout" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="56" assertions="3" time="0.088856"/>
-      <testcase name="test_method_404" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="65" assertions="1" time="0.056474"/>
-      <testcase name="test_APPPATH" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="71" assertions="1" time="0.025451"/>
+    <testsuite name="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" fullPackage="MyController" tests="12" assertions="19" failures="0" errors="0" time="0.667207">
+      <testcase name="test_index" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="17" assertions="1" time="0.049280"/>
+      <testcase name="test_home" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="21" assertions="1" time="0.059297"/>
+      <testcase name="test_login" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="26" assertions="1" time="0.060648"/>
+      <testcase name="test_login_kosong" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="36" assertions="2" time="0.054006"/>
+      <testcase name="test_login_kosongpass" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="46" assertions="2" time="0.052304"/>
+      <testcase name="test_login_kosonguser" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="56" assertions="2" time="0.053555"/>
+      <testcase name="test_login_gagal" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="66" assertions="2" time="0.050860"/>
+      <testcase name="test_logout" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="76" assertions="3" time="0.063999"/>
+      <testcase name="test_createuser" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="84" assertions="1" time="0.078714"/>
+      <testcase name="test_createuser_notvalid" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="99" assertions="2" time="0.068872"/>
+      <testcase name="test_method_404" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="114" assertions="1" time="0.044415"/>
+      <testcase name="test_APPPATH" class="MyController_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\MyController_test.php" line="120" assertions="1" time="0.031257"/>
+    </testsuite>
+    <testsuite name="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" fullPackage="Product" tests="7" assertions="5" failures="0" errors="0" time="0.573128">
+      <testcase name="test_index" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="22" assertions="1" time="0.094602"/>
+      <testcase name="test_readProduct" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="29" assertions="1" time="0.084334"/>
+      <testcase name="test_addProduct_gagal" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="35" assertions="0" time="0.094758"/>
+      <testcase name="test_addProduct" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="57" assertions="0" time="0.088619"/>
+      <testcase name="test_do_delete" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="81" assertions="2" time="0.052842"/>
+      <testcase name="test_do_update" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="92" assertions="1" time="0.071841"/>
+      <testcase name="test_Updatedata_tanpaFoto" class="Product_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\Product_test.php" line="100" assertions="0" time="0.086132"/>
+    </testsuite>
+    <testsuite name="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" fullPackage="ShoppingCart" tests="5" assertions="7" failures="0" errors="0" time="0.390233">
+      <testcase name="test_beli" class="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" line="24" assertions="1" time="0.086091"/>
+      <testcase name="test_clear_cart" class="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" line="35" assertions="2" time="0.073974"/>
+      <testcase name="test_addOrder_cartkosong" class="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" line="44" assertions="2" time="0.047743"/>
+      <testcase name="test_addOrder" class="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" line="55" assertions="1" time="0.106265"/>
+      <testcase name="test_addOrder_fail" class="ShoppingCart_test" file="C:\xampp\htdocs\Dolly\application\tests\controllers\ShoppingCart_test.php" line="65" assertions="1" time="0.076160"/>
     </testsuite>
     <testsuite name="Kos_model_test" file="C:\xampp\htdocs\Dolly\application\tests\models\Model_test.php" fullPackage="Kos.model" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
   </testsuite>

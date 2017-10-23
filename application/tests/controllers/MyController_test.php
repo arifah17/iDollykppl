@@ -29,7 +29,6 @@ class MyController_test extends TestCase
                 'username' => 'haloki',
                 'pass' => 'halohalo',
             ]);
-        //$this->assertRedirect('');
         $this->assertEquals('haloki', $_SESSION['username']);
     }
     
@@ -103,7 +102,7 @@ class MyController_test extends TestCase
                 'phone'=>'085674561210',
                 'address'=>'keputih gang 1',
                 'email'=>'hulahula@gmail.com',
-                'username'=>'haloki',
+                'username'=>'haloki',//username sama
                 'password'=>'halodea1',
                 'confirmpw'=>'halodea1']);
         $totalrowafter= $this->objl->getTotalRow('haloki','hulala','hulahula@gmail.com', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');

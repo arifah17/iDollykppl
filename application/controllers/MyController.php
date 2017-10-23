@@ -45,7 +45,7 @@ class MyController extends CI_Controller {
 	}
 	function aksi(){
 		$this->form_validation->set_rules('name', 'Name', 'trim|required|min_length[5]|max_length[200]');
-		$this->form_validation->set_rules('phone','Phone','trim|required|is_natural');
+		$this->form_validation->set_rules('phone','Phone','trim|required|min_length[11]|numeric|is_natural');
 		$this->form_validation->set_rules('address', 'Address', 'trim|required');
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[user.email]');
 		$this->form_validation->set_rules(
