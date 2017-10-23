@@ -58,6 +58,8 @@ class MyController extends CI_Controller {
 		$this->form_validation->set_rules('password','Password','required');
 		$this->form_validation->set_rules('confirmpw','Confirmpw','required|matches[password]');
 		$this->form_validation->set_message('name','required min length 5 max length 100');
+                $this->form_validation->set_message('phone','required');
+                $this->form_validation->set_message('email','email already exist or you don\'t enter a valid mail');
 		$this->form_validation->set_message('confirmpw','The Confirm password doesnt match password');
 		if($this->form_validation->run() != false){
 			$this->createakun();
