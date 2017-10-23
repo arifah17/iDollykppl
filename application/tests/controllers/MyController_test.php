@@ -140,6 +140,21 @@ class MyController_test extends TestCase
         $this->assertRedirect('MyController/home');
     }
     
+    public function test_createuser_phonekosong(){
+        $totalrow=$this->objl->getTotalRow('hulahup','hulala','arifahkinasih', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');
+        $output = $this->request('POST','MyController/aksi',
+                ['name'=>'hulala',
+                'phone'=>'',
+                'address'=>'keputih gang 1',
+                'email'=>'kikicute@gmail.com',
+                'username'=>'hulahup',
+                'password'=>'halodea1',
+                'confirmpw'=>'halodea1']);
+        $totalrowafter= $this->objl->getTotalRow('hulahup','hulala','arifahkinasih', '085674561210', '271c68f0551dd9765b92f8bae4c1c257', 'keputih gang 1');
+        $this->assertEquals($totalrowafter, $totalrow);
+        $this->assertRedirect('MyController/home');
+    }
+    
        public function test_createuser_kosongsemua(){
         $totalrow=$this->objl->getTotalRow('','','', '', '', '');
         $output = $this->request('POST','MyController/aksi',
